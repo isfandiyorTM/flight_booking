@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:t_store/core/route/route_names.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/text_strings.dart';
+import '../../../core/route/route_names.dart';
 import '../../../helpers/helper_functions.dart';
 import '../widgets/authentification_button.dart';
 import '../widgets/custom_button_widget.dart';
 import '../widgets/custom_input.dart';
 
-class SignIn extends StatelessWidget {
-  SignIn({super.key});
+class SignUp extends StatelessWidget {
+  SignUp({super.key});
 
   final _formKey = GlobalKey<FormState>();
 
@@ -40,7 +39,7 @@ class SignIn extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 const Text(
-                  AppTexts.signIn,
+                  AppTexts.signUp,
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.w500,
@@ -64,12 +63,10 @@ class SignIn extends StatelessWidget {
                     children: [
                       CustomInput(
                           labelText: AppTexts.email,
-                          hintText: AppTexts.enterEmail),
-                      CustomInput(
-                          labelText: AppTexts.password,
-                          hintText: AppTexts.enterPassword),
+                          hintText: AppTexts.enterEmail,
+                      ),
                       CutomButton(
-                        text: AppTexts.signIn,
+                        text: AppTexts.signUp,
                         bgColor: AppColors.blue,
                         textColor: AppColors.white,
                         icon: const Icon(
@@ -88,7 +85,7 @@ class SignIn extends StatelessWidget {
                 const SizedBox(
                   width: double.infinity,
                   child: Text(
-                    AppTexts.orSignInWith,
+                    AppTexts.orSignUpWith,
                     style: TextStyle(
                       color: AppColors.textGray,
                       fontSize: 14,
@@ -126,7 +123,7 @@ class SignIn extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      AppTexts.alreadyHaveAccount,
+                      AppTexts.dontHaveAccount,
                       style: TextStyle(
                         color: AppColors.textGray,
                         fontSize: 14,
@@ -136,9 +133,9 @@ class SignIn extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, RouteNames.signUp);
+                        Navigator.pushNamed(context, RouteNames.signIn);
                       },
-                      child: const Text(AppTexts.signUp,style: TextStyle(color: AppColors.blue),),
+                      child: const Text(AppTexts.signIn,style: TextStyle(color: AppColors.blue),),
                     )
                   ],
                 ),
@@ -150,3 +147,4 @@ class SignIn extends StatelessWidget {
     );
   }
 }
+

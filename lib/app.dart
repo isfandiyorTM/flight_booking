@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'core/route/route_generator.dart';
+import 'core/route/route_names.dart';
 import 'features/authenticatoin/screens/onboarding.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,9 +9,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Onboarding(),
+      home: const Onboarding(),
+      onGenerateRoute: AppRoute(context: context).onGenerateRoute,
     );
   }
 }

@@ -26,4 +26,29 @@ class AppTexts{
   static const String alreadyHaveAccount = "Already have an account?";
   static const String orSignUpWith = "Or Sign Up With";
   static const String dontHaveAccount = "Don’t Have an Account?";
+
+  static const String myProfile = "My Profile";
+  static const String accountName = "Isfandiyor Madaminov";
+  static const String accountEmail = "isfandiyormadaminov12@gmail.com";
+  static const String accountPhone = "+998 (77) 777-77-77";
+  static const String myOrder = "My Order";
+  static const String myVoucher = "My Voucher";
+  static const String paymentMethods = "Payment Methods";
+  static const String inviteFriends = "Invite Friends";
+  static const String quickLogin = "Quick Login";
+  static const String settings = "Settings";
+  static const String logOut = "Log Out";
+
+  static const String searchFlights = "Search Flights";
+  static const String discoverANewWorld = "Discover \na new world";
+  static const String oneWay = "One-way";
+  static const String roundTrip = "Round-trip";
+  static const String from = "From";
+  static const String to = "To";
+  static const String newYork = "New York, USA";
+  static const String vietnam = "Da Nang, Vietnam";
+  static const String departureDate = "Departure Date";
+  static const String date = "August 28, 2021";
+  static const String  travelers = " Travelers";
+  static const String  travelersCount = " 1 Adult, 1 child, 0 Infant";
 }

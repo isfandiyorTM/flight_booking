@@ -5,6 +5,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/image_strings.dart';
 import '../../../core/constants/text_strings.dart';
+import '../../../helpers/helper_functions.dart';
 import '../controllers/onboarding/onboarding_controller.dart';
 import '../widgets/custom_button_widget.dart';
 import '../widgets/onboarding_page_widget.dart';
@@ -17,6 +18,7 @@ class Onboarding extends StatelessWidget {
     final controller = Get.put(OnBoardingController());
 
     return Scaffold(
+      backgroundColor: AppColors.white,
       body: Column(
         children: [
           Expanded(
@@ -52,6 +54,7 @@ class Onboarding extends StatelessWidget {
                   bgColor: AppColors.bgLight,
                   textColor: AppColors.textBlack,
                   icon: null,
+                  width: HelperFunctions.screenWidth() * 0.4,
                   onPressed: () {
                     OnBoardingController.instance.skipPage();
                   },
@@ -61,6 +64,7 @@ class Onboarding extends StatelessWidget {
                   bgColor: AppColors.blue,
                   textColor: AppColors.white,
                   icon: const Icon(Icons.arrow_circle_right,color: AppColors.white,),
+                  width: HelperFunctions.screenWidth() * 0.4,
                   onPressed: () {
                     OnBoardingController.instance.nextPage();
                   },

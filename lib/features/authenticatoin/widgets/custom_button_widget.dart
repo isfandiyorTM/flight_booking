@@ -9,6 +9,7 @@ class CutomButton extends StatelessWidget {
     required this.bgColor,
     required this.textColor,
     required this.icon,
+    required this.width,
     required this.onPressed
   });
 
@@ -17,22 +18,22 @@ class CutomButton extends StatelessWidget {
   Color? textColor;
   Icon? icon;
   VoidCallback? onPressed;
+  double? width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: HelperFunctions.screenWidth() * 0.4,
+      width: width!,
       height: 48,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
             backgroundColor: bgColor!,
-            padding: const EdgeInsets.symmetric(horizontal:45,),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             )),
         child: Row(
-          mainAxisAlignment: icon == null ? MainAxisAlignment.center : MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center ,
           children: [
             Text(
               text!,
@@ -42,6 +43,7 @@ class CutomButton extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
+            icon != null ? const SizedBox(width: 8) : const SizedBox(),
             icon != null ? icon as Widget : const SizedBox(),
           ],
         ),
