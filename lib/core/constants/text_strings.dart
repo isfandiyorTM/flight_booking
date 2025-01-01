@@ -60,4 +60,18 @@ class AppTexts{
   static const String  language = "Language";
   static const String  home = "Home";
   static const String  account = "Account";
+
+  static const String general = "General";
+  static const String notificationSettings = "Notification Settings";
+  static const String location = "Location";
+  static const String accountSecurity = "Account & Security";
+  static const String emailAndMobileNumber = "Email and Mobile Number";
+  static const String securitySetting = "Security Settings";
+  static const String deleteAccount = "Delete Account";
+  static const String other = "Other";
+  static const String aboutIndochinaTravelApp = "About Indochina Travel App";
+  static const String privacyPolicy = "Privacy Policy";
+  static const String termsAndCondition = "Terms and Conditions";
+  static const String rateApp = "Rate App";
+  static const String versionOfApp = "v4.87.2";
 }

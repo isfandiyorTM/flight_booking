@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/core/route/route_names.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/image_strings.dart';
 import '../../../core/constants/text_strings.dart';
@@ -88,7 +89,7 @@ class AccountPage extends StatelessWidget {
             ),
             Column(
               children: [
-                const SizedBox(height: 50),
+                const SizedBox(height: 10),
                 AccountSettingWidget(
                   icon: const Icon(
                     Icons.navigation,
@@ -152,7 +153,7 @@ class AccountPage extends StatelessWidget {
                   ),
                   title: AppTexts.settings,
                   onPressed: (){
-                    Navigator.pushNamed(context, routeName)
+                    Navigator.pushNamed(context, RouteNames.settings);
                   },
                 ),
             

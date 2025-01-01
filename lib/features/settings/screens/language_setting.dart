@@ -1,72 +1,93 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:t_store/core/constants/text_strings.dart';
+
+import '../../../core/constants/colors.dart';
 
 class LanguageSelectionPage extends StatefulWidget {
   @override
   _LanguageSelectionPageState createState() => _LanguageSelectionPageState();
 }
-class _LanguageSelectionPageState extends State<LanguageSelectionPage> {
-  String _selectedLanguage = 'en'; // Default language
 
-  // List of supported languages
+class _LanguageSelectionPageState extends State<LanguageSelectionPage> {
+  String _selectedLanguage = 'en';
+
   final List<Map<String, String>> _languages = [
     {'code': 'en', 'name': 'English'},
-    {'code': 'vi', 'name': 'Vietnamese'},
-    {'code': 'fr', 'name': 'French'},
-    {'code': 'ru', 'name': 'Russian'},
-    {'code': 'uz', 'name': 'Uzbek'},
+    {'code': 'vi', 'name': 'Tiếng Việt'},
+    {'code': 'fr', 'name': 'Français'},
+    {'code': 'ru', 'name': 'Русский'},
+    {'code': 'uz', 'name': "O'zbek"},
   ];
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    // Initialize _selectedLanguage with the current locale's language code
-    _selectedLanguage = context.locale.languageCode;
-  }
-
   // Function to change the language
-  Future<void> _changeLanguage(String languageCode) async {
-    await context.setLocale(Locale(languageCode)); // Set the locale dynamically
+  void _changeLanguage(String languageCode) {
     setState(() {
-      _selectedLanguage = languageCode; // Update the selected language
+      _selectedLanguage = languageCode;
     });
+    context.setLocale(Locale(languageCode));
+    Get.updateLocale(Locale(languageCode));
+
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Language').tr(), // Translation
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
+      backgroundColor: AppColors.white,
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Language', // This text will be translated dynamically
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            const SizedBox(height: 30),
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(CupertinoIcons.back, size: 30),
+            ),
+            const SizedBox(height: 30),
+            const Text(
+              AppTexts.language,
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
+                color: AppColors.textBlack,
+              ),
             ).tr(),
-            SizedBox(height: 20),
-            // Generate the list of radio buttons dynamically
+            const SizedBox(height: 20),
             ..._languages.map((lang) {
-              return RadioListTile<String>(
-                title: Text(lang['name']!),
-                value: lang['code']!,
-                groupValue: _selectedLanguage,
-                onChanged: (value) {
-                  if (value != null) {
-                    _changeLanguage(value); // Change the language when selected
-                  }
-                },
+              return Container(
+                decoration: const BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                          color: AppColors.lightGray,
+                        ))
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(lang['name']!,style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.textBlack,
+                    ),),
+                    Radio<String>(
+                      value: lang['code']!,
+                      groupValue: _selectedLanguage,
+                      onChanged: (value) {
+                        if (value != null) {
+                          _changeLanguage(value);
+                        }
+                      },
+                    ),
+                  ],
+                ),
               );
-            }).toList(),
+            }),
           ],
         ),
       ),

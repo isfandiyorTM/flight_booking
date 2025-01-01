@@ -49,5 +49,17 @@
   "Language": "Язык",
   "Home": "Главная",
   "Transaction": "Транзакция",
-  "Account": "Аккаунт"
+  "Account": "Аккаунт",
+  "General": "Общее",
+  "Notification Settings": "Настройки уведомлений",
+  "Location": "Местоположение",
+  "Account & Security": "Аккаунт и безопасность",
+  "Email and Mobile Number": "Электронная почта и номер мобильного телефона",
+  "Security Settings": "Настройки безопасности",
+  "Delete Account": "Удалить аккаунт",
+  "Other": "Другие",
+  "About Indochina Travel App": "О приложении Indochina Travel",
+  "Privacy Policy": "Политика конфиденциальности",
+  "Terms and Conditions": "Условия использования",
+  "Rate App": "Оценить приложение"
 }

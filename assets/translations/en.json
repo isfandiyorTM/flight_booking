@@ -49,5 +49,17 @@
   "Language": "Language",
   "Home": "Home",
   "Transaction": "Transaction",
-  "Account": "Account"
+  "Account": "Account",
+  "General": "General",
+  "Notification Settings": "Notification Settings",
+  "Location": "Location",
+  "Account & Security": "Account & Security",
+  "Email and Mobile Number": "Email and Mobile Number",
+  "Security Settings": "Security Settings",
+  "Delete Account": "Delete Account",
+  "Other": "Other",
+  "About Indochina Travel App": "About Indochina Travel App",
+  "Privacy Policy": "Privacy Policy",
+  "Terms and Conditions": "Terms and Conditions",
+  "Rate App": "Rate App"
 }

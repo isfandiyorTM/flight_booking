@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/core/route/route_names.dart';
 import 'package:t_store/features/authenticatoin/screens/onboarding.dart';
+import 'package:t_store/features/settings/screens/language_setting.dart';
+import 'package:t_store/features/settings/screens/settings_page.dart';
 import '../../features/authenticatoin/screens/sign_in.dart';
 import '../../features/authenticatoin/screens/sign_up.dart';
 import '../../features/bottom_nav_bar.dart';
@@ -23,6 +25,13 @@ class AppRoute {
 
       case RouteNames.bottomNavBar:
         return MaterialPageRoute(builder: (_) =>  BottomNavBar());
+
+      case RouteNames.settings:
+        return MaterialPageRoute(builder: (_) =>   SettingsPage());
+
+      case RouteNames.languageSettings:
+        return MaterialPageRoute(builder: (_) =>  LanguageSelectionPage());
+
 
       default:
         return _errorRoute();

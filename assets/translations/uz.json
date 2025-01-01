@@ -49,5 +49,17 @@
   "Language": "Til",
   "Home": "Bosh sahifa",
   "Transaction": "Transaksiya",
-  "Account":"Hisob"
+  "Account":"Hisob",
+  "General": "Umumiy",
+  "Notification Settings": "Bildirishnoma Sozlamalari",
+  "Location": "Joylashuv",
+  "Account & Security": "Hisob va Xavfsizlik",
+  "Email and Mobile Number": "Email va Telefon Raqami",
+  "Security Settings": "Xavfsizlik Sozlamalari",
+  "Delete Account": "Hisobni O'chirish",
+  "Other": "Boshqa",
+  "About Indochina Travel App": "Indochina Travel Ilovasi Haqida",
+  "Privacy Policy": "Maxfiylik Siyosati",
+  "Terms and Conditions": "Shartlar va Sharoitlar",
+  "Rate App": "Ilovani Baholash"
 }
