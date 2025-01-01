@@ -6,6 +6,7 @@ import '../../../helpers/helper_functions.dart';
 import '../widgets/authentification_button.dart';
 import '../widgets/custom_button_widget.dart';
 import '../widgets/custom_input.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({super.key});
@@ -45,7 +46,7 @@ class SignUp extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: AppColors.textBlack,
                   ),
-                ),
+                ).tr(),
                 const SizedBox(height: 10),
                 const Text(
                   AppTexts.startYourJourney,
@@ -54,7 +55,7 @@ class SignUp extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: AppColors.textGray,
                   ),
-                ),
+                ).tr(),
                 const SizedBox(height: 20),
                 Form(
                   key: _formKey,
@@ -82,9 +83,9 @@ class SignUp extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                const SizedBox(
+                 SizedBox(
                   width: double.infinity,
-                  child: Text(
+                  child: const Text(
                     AppTexts.orSignUpWith,
                     style: TextStyle(
                       color: AppColors.textGray,
@@ -92,7 +93,7 @@ class SignUp extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                     textAlign: TextAlign.center,
-                  ),
+                  ).tr(),
                 ),
                 const SizedBox(height: 30),
                 Row(
@@ -130,12 +131,12 @@ class SignUp extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.center,
-                    ),
+                    ).tr(),
                     TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, RouteNames.signIn);
                       },
-                      child: const Text(AppTexts.signIn,style: TextStyle(color: AppColors.blue),),
+                      child: const Text(AppTexts.signIn,style: TextStyle(color: AppColors.blue),).tr(),
                     )
                   ],
                 ),

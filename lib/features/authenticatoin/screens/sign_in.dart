@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:t_store/core/route/route_names.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/text_strings.dart';
@@ -7,6 +6,7 @@ import '../../../helpers/helper_functions.dart';
 import '../widgets/authentification_button.dart';
 import '../widgets/custom_button_widget.dart';
 import '../widgets/custom_input.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SignIn extends StatelessWidget {
   SignIn({super.key});
@@ -46,7 +46,7 @@ class SignIn extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: AppColors.textBlack,
                   ),
-                ),
+                ).tr(),
                 const SizedBox(height: 10),
                 const Text(
                   AppTexts.startYourJourney,
@@ -55,7 +55,7 @@ class SignIn extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: AppColors.textGray,
                   ),
-                ),
+                ).tr(),
                 const SizedBox(height: 20),
                 Form(
                   key: _formKey,
@@ -85,9 +85,9 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                const SizedBox(
+                 SizedBox(
                   width: double.infinity,
-                  child: Text(
+                  child: const Text(
                     AppTexts.orSignInWith,
                     style: TextStyle(
                       color: AppColors.textGray,
@@ -95,7 +95,7 @@ class SignIn extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                     textAlign: TextAlign.center,
-                  ),
+                  ).tr(),
                 ),
                 const SizedBox(height: 30),
                 Row(
@@ -133,12 +133,12 @@ class SignIn extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.center,
-                    ),
+                    ).tr(),
                     TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, RouteNames.signUp);
                       },
-                      child: const Text(AppTexts.signUp,style: TextStyle(color: AppColors.blue),),
+                      child: const Text(AppTexts.signUp,style: TextStyle(color: AppColors.blue),).tr(),
                     )
                   ],
                 ),

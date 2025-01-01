@@ -9,6 +9,7 @@ import '../../../helpers/helper_functions.dart';
 import '../controllers/onboarding/onboarding_controller.dart';
 import '../widgets/custom_button_widget.dart';
 import '../widgets/onboarding_page_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});

@@ -51,4 +51,13 @@ class AppTexts{
   static const String date = "August 28, 2021";
   static const String  travelers = " Travelers";
   static const String  travelersCount = " 1 Adult, 1 child, 0 Infant";
+
+  static const String  transaction = "Transaction";
+  static const String  letsGo = "Let’s go somewhere";
+  static const String  letsGoSubTitle = "After book a trip you can manage orders and see E-ticket here.";
+  static const String  bookTrip = "Book a trip";
+
+  static const String  language = "Language";
+  static const String  home = "Home";
+  static const String  account = "Account";
 }

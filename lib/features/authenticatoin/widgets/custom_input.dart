@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class CustomInput extends StatelessWidget {
   CustomInput({
@@ -25,10 +26,10 @@ class CustomInput extends StatelessWidget {
               color: AppColors.textGray,
               fontWeight: FontWeight.w400,
             ),
-          ),
+          ).tr(),
           TextFormField(
             decoration: InputDecoration(
-                hintText: hintText!,
+                hintText: hintText!.tr(),
                 hintStyle: const TextStyle(fontSize: 14,color: AppColors.textBlack,fontWeight: FontWeight.w500),
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: AppColors.textGray),

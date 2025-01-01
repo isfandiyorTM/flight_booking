@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/image_strings.dart';
 import '../../../core/constants/text_strings.dart';
+import '../widgets/choose_flight_input_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -71,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
                         ),
-                      ),
+                      ).tr(),
                       const Expanded(child: SizedBox()),
 
                     ],
@@ -84,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.w700,
                       color: AppColors.white,
                     ),
-                  ),
+                  ).tr(),
                 ],
               ),
             ),
@@ -120,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                           color: AppColors.textBlack,
                           fontWeight: FontWeight.w500,
                         ),
-                      ),
+                      ).tr(),
                       Radio<String>(
                         value: AppTexts.roundTrip,
                         activeColor: AppColors.blue,
@@ -138,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                           color: AppColors.textBlack,
                           fontWeight: FontWeight.w500,
                         ),
-                      )
+                      ).tr()
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -192,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                       child: const Text(
                         AppTexts.searchFlights,
                         style: TextStyle(color: AppColors.white,fontSize: 16,fontWeight: FontWeight.w500),
-                      ),
+                      ).tr(),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -206,57 +208,3 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class ChooseFlightInput extends StatelessWidget {
-  ChooseFlightInput(
-      {super.key,
-      required this.title,
-      required this.hintText,
-      required this.icon,
-        this.onPressed,
-        this.readOnly,
-        this.controller
-      });
-
-
-  String? title;
-  String? hintText;
-  Icon? icon;
-  VoidCallback? onPressed;
-  bool? readOnly;
-  TextEditingController? controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title!,
-          style: const TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 14,
-            color: AppColors.textBlack,
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 10, bottom: 20),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: AppColors.bgLight,
-              border: Border.all(width: 1, color: AppColors.borderColor)),
-          child: TextFormField(
-            controller: controller,
-            decoration: InputDecoration(
-              prefixIcon: icon!,
-              hintText: hintText!,
-              contentPadding: const EdgeInsets.only(top: 13),
-              border: InputBorder.none,
-            ),
-            onTap: onPressed,
-            readOnly: readOnly??false,
-          ),
-        ),
-      ],
-    );
-  }
-}

@@ -1,20 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class AccountSettingWidget extends StatelessWidget {
   AccountSettingWidget({
     super.key,
     required this.icon,
     required this.title,
+    this.onPressed
   });
 
   Icon? icon;
   String? title;
+  VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: onPressed,
       leading: icon!,
       title: Text(
         title!,
@@ -23,7 +27,7 @@ class AccountSettingWidget extends StatelessWidget {
           fontWeight: FontWeight.w500,
           color: Colors.black,
         ),
-      ),
+      ).tr(),
       trailing: const Icon(
         CupertinoIcons.chevron_forward,
         color: AppColors.textGray,

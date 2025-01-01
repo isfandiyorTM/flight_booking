@@ -5,6 +5,7 @@ import '../../../core/constants/colors.dart';
 import '../../../core/constants/image_strings.dart';
 import '../../../core/constants/text_strings.dart';
 import '../widgets/account_setting_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class AccountPage extends StatelessWidget {
   const AccountPage({super.key});
@@ -35,7 +36,7 @@ class AccountPage extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: AppColors.white),
-                    ),
+                    ).tr(),
                     const SizedBox(height: 30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,33 +45,33 @@ class AccountPage extends StatelessWidget {
                           foregroundImage: AssetImage(AppImages.profileImage),
                           radius: 45,
                         ),
-                        const Column(
+                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               AppTexts.accountName,
                               style: TextStyle(
                                 fontSize: 20,
                                 color: AppColors.white,
                                 fontWeight: FontWeight.w600,
                               ),
-                            ),
-                            Text(
+                            ).tr(),
+                            const Text(
                               AppTexts.accountEmail,
                               style: TextStyle(
                                 fontSize: 14,
                                 color: AppColors.white,
                                 fontWeight: FontWeight.w400,
                               ),
-                            ),
-                            Text(
+                            ).tr(),
+                            const Text(
                               AppTexts.accountPhone,
                               style: TextStyle(
                                 fontSize: 14,
                                 color: AppColors.white,
                                 fontWeight: FontWeight.w400,
                               ),
-                            ),
+                            ).tr(),
                           ],
                         ),
                         IconButton(
@@ -150,6 +151,9 @@ class AccountPage extends StatelessWidget {
                     size: 30,
                   ),
                   title: AppTexts.settings,
+                  onPressed: (){
+                    Navigator.pushNamed(context, routeName)
+                  },
                 ),
             
                 Container(

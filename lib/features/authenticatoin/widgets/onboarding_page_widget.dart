@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/constants/colors.dart';
 import '../../../helpers/helper_functions.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class OnboardingPage extends StatelessWidget {
   OnboardingPage({
@@ -21,7 +21,7 @@ class OnboardingPage extends StatelessWidget {
         children: [
           Image(
             image:  AssetImage(image!),
-            height: HelperFunctions.screenHeight() * 0.7,
+            height: HelperFunctions.screenHeight() * 0.6,
           ),
           Text(
             text!,
@@ -30,7 +30,7 @@ class OnboardingPage extends StatelessWidget {
               fontWeight: FontWeight.w700,
               color: AppColors.textBlack,
             ),
-          ),
+          ).tr(),
         ],
       ),
     );

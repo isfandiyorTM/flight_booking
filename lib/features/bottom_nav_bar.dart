@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/features/account/screens/account_page.dart';
-import 'package:t_store/features/home/screens/home_page.dart';
+import 'package:t_store/core/constants/text_strings.dart';
 import 'package:t_store/features/transaction/screens/transaction_page.dart';
-
 import '../core/constants/colors.dart';
+import 'account/screens/account_page.dart';
+import 'home/screens/home_page.dart';
+import 'settings/screens/language_setting.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 
 class BottomNavBar extends StatefulWidget {
   @override
@@ -15,7 +18,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final List<Widget> _pages = [
     HomePage(),
-    const TransactionPage(),
+    TransactionPage() ,
     const AccountPage(),
   ];
 
@@ -39,18 +42,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
         selectedItemColor: AppColors.blue,
         unselectedItemColor: AppColors.textGray,
         backgroundColor:AppColors.white,
-        items: const [
+        items:  [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home ,size: 30,),
-            label: 'Home',
+            icon: const Icon(Icons.home ,size: 30,),
+            label: AppTexts.home.tr(),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.confirmation_num ,size: 30,),
-            label: 'Transaction',
+            icon: const Icon(Icons.confirmation_num ,size: 30,),
+            label: AppTexts.transaction.tr(),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person,size: 30,),
-            label: 'Account',
+           BottomNavigationBarItem(
+            icon: const Icon(Icons.person,size: 30,),
+            label: AppTexts.account.tr(),
           ),
 
         ],

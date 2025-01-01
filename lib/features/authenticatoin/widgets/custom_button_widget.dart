@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../helpers/helper_functions.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class CutomButton extends StatelessWidget {
   CutomButton({
@@ -42,7 +41,7 @@ class CutomButton extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),
-            ),
+            ).tr(),
             icon != null ? const SizedBox(width: 8) : const SizedBox(),
             icon != null ? icon as Widget : const SizedBox(),
           ],
