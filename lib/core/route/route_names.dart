@@ -6,4 +6,5 @@ class RouteNames {
   static const String bottomNavBar = '/bottomNavBar';
   static const String settings = '/settings';
   static const String languageSettings = '/languageSettings';
+  static const String notificationSettings = '/notificationSettings';
 }

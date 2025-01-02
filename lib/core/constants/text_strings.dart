@@ -74,4 +74,17 @@ class AppTexts{
   static const String termsAndCondition = "Terms and Conditions";
   static const String rateApp = "Rate App";
   static const String versionOfApp = "v4.87.2";
+
+  static const String pushNotificationDisabled = "Push Notification Disabled";
+  static const String toEnableNotification = "To enable notifications, go to ";
+  static const String activity = "Activity";
+  static const String activitySubTitle = "Secure your account by keeping your log in, register, and OTP activity on track.";
+  static const String specialForYou = "Special For You";
+  static const String specialForYouSubtitle = "You can never have too much of limited-time discount, exclusive offers, tips and info new feature.";
+  static const String reminders = "Reminders";
+  static const String remindersSubtitle = "Get important travel news and info, payment reminders, check-in reminder and more.";
+  static const String membership = "Reminders";
+  static const String membershipSubtitle = "You’ll get emails about ticket Elite Rewards and surveys";
+  static const String emailCapitalize = "Email";
+  static const String pushNotification = "Push Notification";
 }

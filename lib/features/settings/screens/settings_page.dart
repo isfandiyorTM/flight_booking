@@ -67,6 +67,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 color: AppColors.textGray,
               ),
               title: AppTexts.notificationSettings,
+              onPressed: ()=> Navigator.pushNamed(context, RouteNames.notificationSettings),
             ),
             SettingWidget(
               icon: Switch(

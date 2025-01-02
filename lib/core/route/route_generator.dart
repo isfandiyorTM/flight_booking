@@ -6,6 +6,7 @@ import 'package:t_store/features/settings/screens/settings_page.dart';
 import '../../features/authenticatoin/screens/sign_in.dart';
 import '../../features/authenticatoin/screens/sign_up.dart';
 import '../../features/bottom_nav_bar.dart';
+import '../../features/settings/screens/notification_setting.dart';
 
 class AppRoute {
   BuildContext context;
@@ -31,6 +32,9 @@ class AppRoute {
 
       case RouteNames.languageSettings:
         return MaterialPageRoute(builder: (_) =>  LanguageSelectionPage());
+
+      case RouteNames.notificationSettings:
+        return MaterialPageRoute(builder: (_) =>  NotificationSettingsPage());
 
 
       default:
