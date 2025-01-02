@@ -73,5 +73,21 @@
   "Membership": "Членство",
   "You’ll get emails about ticket Elite Rewards and surveys": "Вы будете получать письма о наградах Elite и опросах.",
   "Email": "Электронная почта",
-  "Push Notification": "Push-уведомление"
+  "Push Notification": "Push-уведомление",
+  "Unverified": "Не подтверждено",
+  "You will receive every transaction & security information on this email.": "Вы будете получать информацию о каждой транзакции и безопасности на этот адрес электронной почты.",
+  "Credit Card": "Кредитная Карта",
+  "Double Verification": "Двойная Проверка",
+  "Enter CVV & OTP code for more secure payment verification.": "Введите CVV и OTP код для более надежной проверки платежа.",
+  "Single Verification": "Одиночная Проверка",
+  "Biometric": "Биометрия",
+  "Activate Biometric Feature": "Активировать Биометрическую Функцию",
+  "To enjoy a seamless log in with fingerprint or face recognition.": "Для удобного входа с использованием отпечатка пальца или распознавания лица.",
+  "Device": "Устройство",
+  "Set Device as Trusted": "Установить Устройство как Надежное",
+  "Activate to set a Pin and Manage device connectivity.": "Активируйте для установки PIN-кода и управления подключением устройства.",
+  "Pin": "ПИН-код",
+  "Set PIN": "Установить ПИН-код",
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Установите 6-значный ПИН-код для защиты действий в аккаунте."
+
 }

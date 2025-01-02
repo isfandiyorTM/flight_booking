@@ -73,5 +73,21 @@
   "Membership": "Membership",
   "You’ll get emails about ticket Elite Rewards and surveys": "You’ll get emails about ticket Elite Rewards and surveys",
   "Email": "Email",
-  "Push Notification": "Push Notification"
+  "Push Notification": "Push Notification",
+  "Unverified": "Unverified",
+  "You will receive every transaction & security information on this email.": "You will receive every transaction & security information on this email.",
+  "Credit Card": "Credit Card",
+  "Double Verification": "Double Verification",
+  "Enter CVV & OTP code for more secure payment verification.": "Enter CVV & OTP code for more secure payment verification.",
+  "Single Verification": "Single Verification",
+  "Biometric": "Biometric",
+  "Activate Biometric Feature": "Activate Biometric Feature",
+  "To enjoy a seamless log in with fingerprint or face recognition.": "To enjoy a seamless log in with fingerprint or face recognition.",
+  "Device": "Device",
+  "Set Device as Trusted": "Set Device as Trusted",
+  "Activate to set a Pin and Manage device connectivity.": "Activate to set a Pin and Manage device connectivity.",
+  "Pin": "Pin",
+  "Set PIN": "Set PIN",
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Set a 6 digit verification PIN to secure your accounts activities."
+
 }

@@ -73,5 +73,21 @@
   "Membership": "Thành viên",
   "You’ll get emails about ticket Elite Rewards and surveys": "Bạn sẽ nhận được email về phần thưởng Elite và khảo sát vé.",
   "Email": "Email",
-  "Push Notification": "Thông báo đẩy"
+  "Push Notification": "Thông báo đẩy",
+  "Unverified": "Chưa được xác minh",
+  "You will receive every transaction & security information on this email.": "Bạn sẽ nhận được mọi thông tin giao dịch và bảo mật qua email này.",
+  "Credit Card": "Thẻ Tín Dụng",
+  "Double Verification": "Xác Minh Kép",
+  "Enter CVV & OTP code for more secure payment verification.": "Nhập mã CVV & OTP để xác minh thanh toán an toàn hơn.",
+  "Single Verification": "Xác Minh Đơn",
+  "Biometric": "Sinh Trắc Học",
+  "Activate Biometric Feature": "Kích Hoạt Tính Năng Sinh Trắc Học",
+  "To enjoy a seamless log in with fingerprint or face recognition.": "Đăng nhập mượt mà với vân tay hoặc nhận diện khuôn mặt.",
+  "Device": "Thiết Bị",
+  "Set Device as Trusted": "Đặt Thiết Bị là Đáng Tin Cậy",
+  "Activate to set a Pin and Manage device connectivity.": "Kích hoạt để đặt mã PIN và quản lý kết nối thiết bị.",
+  "Pin": "Mã PIN",
+  "Set PIN": "Đặt Mã PIN",
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Đặt mã PIN xác minh 6 chữ số để bảo vệ hoạt động tài khoản của bạn."
+
 }

@@ -73,5 +73,21 @@
   "Membership": "Adhésion",
   "You’ll get emails about ticket Elite Rewards and surveys": "Vous recevrez des e-mails sur les récompenses élite des billets et les sondages.",
   "Email": "E-mail",
-  "Push Notification": "Notification push"
+  "Push Notification": "Notification push",
+  "Unverified": "Non vérifié",
+  "You will receive every transaction & security information on this email.": "Vous recevrez chaque transaction et information de sécurité sur cet e-mail.",
+  "Credit Card": "Carte de Crédit",
+  "Double Verification": "Double Vérification",
+  "Enter CVV & OTP code for more secure payment verification.": "Saisissez le code CVV et OTP pour une vérification de paiement plus sécurisée.",
+  "Single Verification": "Vérification Unique",
+  "Biometric": "Biométrique",
+  "Activate Biometric Feature": "Activer la Fonctionnalité Biométrique",
+  "To enjoy a seamless log in with fingerprint or face recognition.": "Profitez d'une connexion fluide avec l'empreinte digitale ou la reconnaissance faciale.",
+  "Device": "Appareil",
+  "Set Device as Trusted": "Définir l'Appareil comme Fiable",
+  "Activate to set a Pin and Manage device connectivity.": "Activez pour définir un code PIN et gérer la connectivité de l'appareil.",
+  "Pin": "Code PIN",
+  "Set PIN": "Définir le Code PIN",
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Définissez un code PIN de vérification à 6 chiffres pour sécuriser les activités de votre compte."
+
 }

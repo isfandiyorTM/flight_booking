@@ -73,5 +73,21 @@
   "Membership": "A'zolik",
   "You’ll get emails about ticket Elite Rewards and surveys": "Siz chiptalar, Elite mukofotlari va so‘rovlar haqida elektron pochta xabarlarini olasiz.",
   "Email": "Elektron pochta",
-  "Push Notification": "Push xabarnoma"
+  "Push Notification": "Push xabarnoma",
+  "Unverified": "Tasdiqlanmagan",
+  "You will receive every transaction & security information on this email.": "Siz ushbu elektron pochta orqali barcha tranzaksiya va xavfsizlik ma'lumotlarini olasiz.",
+  "Credit Card": "Kredit Karta",
+  "Double Verification": "Ikki marta Tekshirish",
+  "Enter CVV & OTP code for more secure payment verification.": "To'lovni xavfsizroq tasdiqlash uchun CVV va OTP kodini kiriting.",
+  "Single Verification": "Bir martalik Tekshirish",
+  "Biometric": "Biometrik",
+  "Activate Biometric Feature": "Biometrik Funksiyani Faollashtiring",
+  "To enjoy a seamless log in with fingerprint or face recognition.": "Barmoq izi yoki yuzni aniqlash bilan qulay kirishni ta'minlang.",
+  "Device": "Qurilma",
+  "Set Device as Trusted": "Qurilmani Ishonchli deb Belgilang",
+  "Activate to set a Pin and Manage device connectivity.": "PIN kodni o'rnatish va qurilma ulanishini boshqarish uchun faollashtiring.",
+  "Pin": "PIN",
+  "Set PIN": "PIN Kodni O'rnating",
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Hisobingiz faoliyatini himoya qilish uchun 6 raqamli PIN kod o'rnating."
+
 }
