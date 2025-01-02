@@ -18,6 +18,7 @@ class SettingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: const EdgeInsets.all(0),
       onTap: onPressed,
       trailing: icon,
       title: Text(

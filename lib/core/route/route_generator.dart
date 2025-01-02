@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/core/route/route_names.dart';
 import 'package:t_store/features/authenticatoin/screens/onboarding.dart';
+import 'package:t_store/features/settings/screens/email_and_mobile_setting.dart';
 import 'package:t_store/features/settings/screens/language_setting.dart';
+import 'package:t_store/features/settings/screens/security_setting.dart';
 import 'package:t_store/features/settings/screens/settings_page.dart';
 import '../../features/authenticatoin/screens/sign_in.dart';
 import '../../features/authenticatoin/screens/sign_up.dart';
@@ -36,6 +38,11 @@ class AppRoute {
       case RouteNames.notificationSettings:
         return MaterialPageRoute(builder: (_) =>  NotificationSettingsPage());
 
+      case RouteNames.emailAndMobileNumber:
+        return MaterialPageRoute(builder: (_) =>  EmailAndMobilenumberPage());
+
+      case RouteNames.securitySettings:
+        return MaterialPageRoute(builder: (_) =>  SecuritySettingsPage());
 
       default:
         return _errorRoute();

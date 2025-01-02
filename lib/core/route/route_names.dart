@@ -7,4 +7,6 @@ class RouteNames {
   static const String settings = '/settings';
   static const String languageSettings = '/languageSettings';
   static const String notificationSettings = '/notificationSettings';
+  static const String emailAndMobileNumber = '/emailAndMobileNumber';
+  static const String securitySettings = '/securitySettings';
 }

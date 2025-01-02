@@ -7,6 +7,7 @@ import 'package:t_store/core/constants/text_strings.dart';
 import 'package:t_store/features/settings/widgets/setting_widget.dart';
 
 import '../../../core/constants/colors.dart';
+import '../widgets/notification_setting_widget.dart';
 
 class NotificationSettingsPage extends StatefulWidget {
   @override
@@ -26,11 +27,11 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 30),
-              IconButton(
-                onPressed: () {
+              GestureDetector(
+                onTap: () {
                   Navigator.pop(context);
                 },
-                icon: const Icon(CupertinoIcons.back, size: 30),
+                child: const Icon(CupertinoIcons.back, size: 30),
               ),
               const SizedBox(height: 30),
               const Text(
@@ -84,90 +85,4 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
     );
   }
 }
-class NotificationSettingWidget extends StatelessWidget {
-  NotificationSettingWidget({
-    super.key,
-    required this.title,
-    required this.subTitle,
-  });
-  String? title;
-  String? subTitle;
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title!,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-            color: AppColors.textBlack,
-          ),
-        ).tr(),
-        const SizedBox(height: 8),
-        Text(
-          subTitle!,
-          style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: AppColors.textGray),
-        ).tr(),
-        NotificationSettingSwitchWidget(title: AppTexts.emailCapitalize),
-        NotificationSettingSwitchWidget(title: AppTexts.pushNotification),
-        const SizedBox(height: 30),
-      ],
-    );
-  }
-}
-
-class NotificationSettingSwitchWidget extends StatefulWidget {
-  NotificationSettingSwitchWidget({
-    super.key,
-    required this.title,
-  });
-
-  String? title;
-  bool light = true;
-
-  @override
-  State<NotificationSettingSwitchWidget> createState() => _NotificationSettingSwitchWidgetState();
-}
-
-class _NotificationSettingSwitchWidgetState extends State<NotificationSettingSwitchWidget> {
-  @override
-  Widget build(BuildContext context) {
-
-    return  ListTile(
-      trailing: Theme(
-        data: ThemeData(
-          useMaterial3: true,
-        ).copyWith(
-          colorScheme: Theme.of(context)
-              .colorScheme
-              .copyWith(outline: Colors.white),
-        ),
-        child: Switch(
-          value: widget.light,
-          activeTrackColor: AppColors.blue,
-          inactiveTrackColor: AppColors.lightGray,
-          inactiveThumbColor: AppColors.white,
-          onChanged: (value) => setState(() => widget.light = !value),
-        ),
-      ),
-      title:  Text(
-        style: const TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.w400,
-          color: AppColors.textBlack,
-        ),
-        widget.title!,
-      ).tr(),
-      shape: const Border(
-          bottom: BorderSide(
-            color: AppColors.lightGray,
-          )),
-    );
-  }
-}

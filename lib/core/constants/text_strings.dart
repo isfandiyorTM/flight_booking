@@ -87,4 +87,21 @@ class AppTexts{
   static const String membershipSubtitle = "You’ll get emails about ticket Elite Rewards and surveys";
   static const String emailCapitalize = "Email";
   static const String pushNotification = "Push Notification";
+
+  static const String unverified = "Unverified";
+  static const String youWillReceive = "You will receive  every transcation & security information on this email.";
+
+  static const String creditCard = "Credit Card";
+  static const String doubleVerification = "Double Verification";
+  static const String verificationSubtitle = "Enter CVV & OTP code for more secure payment verification.";
+  static const String singleVerification = "Single Verification";
+  static const String biometric = "Biometric";
+  static const String activeBiometricFeature = "Activate Biometric Feature";
+  static const String activeBiometricFeatureSubtitle = "To enjoy a seamless log in with fingerprint or face recognition.";
+  static const String device = "Device";
+  static const String setDeviceAsTrusted = "Set Device as Trusted";
+  static const String setDeviceAsTrustedSubtitle = "Activate to set a Pin and Manage device connectivity.";
+  static const String pin = "Pin";
+  static const String setPIN = "Set PIN";
+  static const String setPINSubtitle = "Set a 6 digit verification PIN to secure your accounts activities.";
 }

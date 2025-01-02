@@ -29,11 +29,11 @@ class _SettingsPageState extends State<SettingsPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            IconButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 Navigator.pop(context);
               },
-              icon: const Icon(CupertinoIcons.back, size: 30),
+              child: const Icon(CupertinoIcons.back, size: 30),
             ),
             const SizedBox(height: 30),
             const Text(
@@ -97,6 +97,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 color: AppColors.textGray,
               ),
               title: AppTexts.emailAndMobileNumber,
+              onPressed: ()=> Navigator.pushNamed(context,RouteNames.emailAndMobileNumber),
             ),
             SettingWidget(
               icon: const Icon(
@@ -104,6 +105,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 color: AppColors.textGray,
               ),
               title: AppTexts.securitySetting,
+              onPressed: ()=> Navigator.pushNamed(context,RouteNames.securitySettings),
             ),
             SettingWidget(
               icon: const Icon(

@@ -43,11 +43,11 @@ class _LanguageSelectionPageState extends State<LanguageSelectionPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 30),
-            IconButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 Navigator.pop(context);
               },
-              icon: const Icon(CupertinoIcons.back, size: 30),
+              child: const Icon(CupertinoIcons.back, size: 30),
             ),
             const SizedBox(height: 30),
             const Text(
