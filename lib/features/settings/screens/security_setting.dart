@@ -203,21 +203,21 @@ class _SecuritySettingsPageState extends State<SecuritySettingsPage> {
                         context: context,
                         builder: (BuildContext context) => AlertDialog(
                           title: const Text(
-                            AppTexts.setDeviceAsTrusted,
+                            AppTexts.continueDeviceAsTrusted,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
                               color: AppColors.textBlack,
                             ),
-                          ),
+                          ).tr(),
                           content: const Text(
-                            AppTexts.setDeviceAsTrustedSubtitle,
+                            AppTexts.continueDeviceAsTrustedDescription,
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                               color: AppColors.textGray,
                             ),
-                          ),
+                          ).tr(),
                           actions: <Widget>[
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -236,7 +236,7 @@ class _SecuritySettingsPageState extends State<SecuritySettingsPage> {
                                         fontWeight: FontWeight.w500,
                                         color: AppColors.blue,
                                       ),
-                                    ),
+                                    ).tr(),
                                   ),
                                 ),
                                 Container(
@@ -253,7 +253,7 @@ class _SecuritySettingsPageState extends State<SecuritySettingsPage> {
                                         fontWeight: FontWeight.w500,
                                         color: AppColors.white,
                                       ),
-                                    ),
+                                    ).tr(),
                                   ),
                                 ),
                               ],

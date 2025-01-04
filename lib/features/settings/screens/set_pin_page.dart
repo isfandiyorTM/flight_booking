@@ -4,6 +4,7 @@ import '../../../core/constants/colors.dart';
 import '../../../core/constants/text_strings.dart';
 import '../../../core/route/route_names.dart';
 import '../widgets/pin_input_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SetPinPage extends StatelessWidget {
   @override
@@ -30,7 +31,7 @@ class SetPinPage extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 color: AppColors.textBlack,
               ),
-            ),
+            ).tr(),
             const SizedBox(height: 8),
             const Text(
               AppTexts.setPinSubTitle,
@@ -39,7 +40,7 @@ class SetPinPage extends StatelessWidget {
                 color: AppColors.textGray,
                 fontWeight: FontWeight.w500,
               ),
-            ),
+            ).tr(),
             const SizedBox(height: 24),
             PinInputField(
               onComplete: (pin) {
