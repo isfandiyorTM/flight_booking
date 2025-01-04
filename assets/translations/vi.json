@@ -95,7 +95,31 @@
   "Yes, continue": "Có, tiếp tục",
   "Set Pin": "Đặt Mã PIN",
   "Confirm your PIN": "Xác nhận Mã PIN của bạn",
-  "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.": "Nhập mã PIN 6 chữ số. Đảm bảo rằng tổ hợp không dễ đoán."
+  "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.": "Nhập mã PIN 6 chữ số. Đảm bảo rằng tổ hợp không dễ đoán.",
+  "You sure want to delete your account?": "Bạn có chắc muốn xóa tài khoản của mình?",
+  "If you delete your account:": "Nếu bạn xóa tài khoản của mình:",
+  "Your remaining tiket Points cannot be used anymore.": "Điểm Tiket còn lại của bạn sẽ không thể sử dụng nữa.",
+  "Your tiket Elite Rewards benefits will not be available anymore.": "Các lợi ích từ Tiket Elite Rewards của bạn sẽ không còn khả dụng.",
+  "All your pending rewards will be deleted.": "Tất cả các phần thưởng đang chờ xử lý của bạn sẽ bị xóa.",
+  "All rewards from using credit card can no longer be obtained.": "Tất cả các phần thưởng từ việc sử dụng thẻ tín dụng sẽ không còn nhận được nữa.",
+  "I understand and accept all the above risks regarding my account deletion.": "Tôi hiểu và chấp nhận tất cả các rủi ro trên liên quan đến việc xóa tài khoản của tôi.",
+  "Digital payment method(s)": "Phương thức thanh toán kỹ thuật số",
+  "Swipe left to set your default method": "Vuốt sang trái để đặt phương thức mặc định",
+  "***8976": "***8976",
+  "Get 10$ Discount": "Nhận giảm giá 10$",
+  "Paypal": "Paypal",
+  "Add Methods": "Thêm phương thức",
+  "Credit or debit card": "Thẻ tín dụng hoặc thẻ ghi nợ",
+  "Add": "Thêm",
+  "Visa, Mastercard, AMEX and JCB": "Visa, Mastercard, AMEX và JCB",
+  "Transfer": "Chuyển khoản",
+  "Transferring via ATM, Internet \nBanking & Mobile Banking": "Chuyển khoản qua ATM, Internet Banking và Mobile Banking",
+  "Subtotal": "Tổng phụ",
+  "Passcode": "Mã bảo mật",
+  "Enter Your Passcode to Proceed the Payment": "Nhập mã bảo mật của bạn để thực hiện thanh toán",
+  "Forgot passcode?": "Quên mã bảo mật?",
+  "Order Confirmed": "Đơn hàng đã được xác nhận",
+  "Thank you for your order. You will receive email confirmation shortly.": "Cảm ơn bạn đã đặt hàng. Bạn sẽ nhận được xác nhận qua email sớm."
 
 
 }

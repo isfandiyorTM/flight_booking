@@ -114,4 +114,34 @@ class AppTexts{
   static const String confirmPin = "Confirm your PIN";
   static const String setPinSubTitle = "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.";
 
+  static const String youSureToDelete = "You sure want to delete your account?";
+  static const String ifYouDeleteYourAcc = "If you delete your account:";
+  static const String ticketPointNoUsable = "Your remaining tiket Points cannot be used anymore.";
+  static const String rewardsNotAvailable = "Your tiket Elite Rewards benefits will not be available anymore.";
+  static const String rewardsWillDeleted= "All your pending rewards will be deleted.";
+  static const String creditCardRewards= "All rewards from using credit card can no longer be obtained.";
+  static const String iUnderstandAndAccept= "I understand and accept all the above risks regarding my account deletion.";
+
+  static const String digitalPaymentMethods = "Digital payment method(s)";
+  static const String swipeLeft = "Swipe left to set your default method";
+  static const String card = "***8976";
+  static const String discount = "Get 10\$ Discount";
+  static const String paypal = "Paypal";
+  static const String addMethods = "Add Methods";
+  static const String creditOrDebitCard = "Credit or debit card";
+  static const String add = "Add";
+  static const String visaMasterCard = "Visa, Mastercard, AMEX and JCB";
+  static const String transfer = "Transfer";
+  static const String transferSubtitle = "Transferring via ATM, Internet \nBanking & Mobile Banking";
+  static const String subtotal = "Subtotal";
+
+  static const String passcode = "Passcode";
+  static const String enterYourPasscode = "Enter Your Passcode to Proceed the Payment";
+  static const String forgotPassword = "Forgot passcode?";
+
+  static const String orderConfirmed = "Order Confirmed";
+  static const String orderConfirmedSubtitle = "Thank you for your order. You will receive email confirmation shortly.";
+
+
+
 }

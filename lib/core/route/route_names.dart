@@ -11,4 +11,8 @@ class RouteNames {
   static const String securitySettings = '/securitySettings';
   static const String setPin = '/setPin';
   static const String confirmPage = '/confirmPage';
+  static const String deleteAccount = '/deleteAccount';
+  static const String paymentMethods = '/paymentMethods';
+  static const String passcodePage = '/passcodePage';
+  static const String orderConfirmed = '/orderConfirmed';
 }
