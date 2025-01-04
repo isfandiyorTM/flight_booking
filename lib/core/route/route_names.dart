@@ -9,4 +9,6 @@ class RouteNames {
   static const String notificationSettings = '/notificationSettings';
   static const String emailAndMobileNumber = '/emailAndMobileNumber';
   static const String securitySettings = '/securitySettings';
+  static const String setPin = '/setPin';
+  static const String confirmPage = '/confirmPage';
 }

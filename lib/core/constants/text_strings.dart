@@ -104,4 +104,14 @@ class AppTexts{
   static const String pin = "Pin";
   static const String setPIN = "Set PIN";
   static const String setPINSubtitle = "Set a 6 digit verification PIN to secure your accounts activities.";
+
+  static const String continueDeviceAsTrusted = "Continue and set device as trusted?";
+  static const String continueDeviceAsTrustedDescription = "To set a PIN, this device needs to be set as trusted";
+  static const String noCancel = "No, cancel";
+  static const String yesContinue = "Yes, continue";
+
+  static const String setPin = "Set Pin";
+  static const String confirmPin = "Confirm your PIN";
+  static const String setPinSubTitle = "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.";
+
 }

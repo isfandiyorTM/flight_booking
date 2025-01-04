@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/core/route/route_names.dart';
 import 'package:t_store/features/authenticatoin/screens/onboarding.dart';
+import 'package:t_store/features/settings/screens/confirm_pin_page.dart';
 import 'package:t_store/features/settings/screens/email_and_mobile_setting.dart';
 import 'package:t_store/features/settings/screens/language_setting.dart';
 import 'package:t_store/features/settings/screens/security_setting.dart';
+import 'package:t_store/features/settings/screens/set_pin_page.dart';
 import 'package:t_store/features/settings/screens/settings_page.dart';
 import '../../features/authenticatoin/screens/sign_in.dart';
 import '../../features/authenticatoin/screens/sign_up.dart';
@@ -43,6 +45,13 @@ class AppRoute {
 
       case RouteNames.securitySettings:
         return MaterialPageRoute(builder: (_) =>  SecuritySettingsPage());
+
+      case RouteNames.setPin:
+        return MaterialPageRoute(builder: (_) =>  SetPinPage());
+
+      case RouteNames.confirmPage:
+        return MaterialPageRoute(builder: (_) =>  ConfirmPinPage());
+
 
       default:
         return _errorRoute();

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/core/constants/text_strings.dart';
+import 'package:t_store/core/route/route_names.dart';
 import 'package:t_store/features/settings/widgets/security_setting_widget.dart';
 import '../../../core/constants/colors.dart';
 
@@ -81,13 +82,11 @@ class _SecuritySettingsPageState extends State<SecuritySettingsPage> {
                 ],
               ),
             ),
-
             Container(
               width: double.infinity,
               height: 20,
               color: AppColors.lightGray,
             ),
-
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Column(
@@ -124,13 +123,11 @@ class _SecuritySettingsPageState extends State<SecuritySettingsPage> {
                 ],
               ),
             ),
-
             Container(
               width: double.infinity,
               height: 20,
               color: AppColors.lightGray,
             ),
-
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Column(
@@ -167,13 +164,11 @@ class _SecuritySettingsPageState extends State<SecuritySettingsPage> {
                 ],
               ),
             ),
-
             Container(
               width: double.infinity,
               height: 20,
               color: AppColors.lightGray,
             ),
-
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Column(
@@ -198,8 +193,76 @@ class _SecuritySettingsPageState extends State<SecuritySettingsPage> {
                             .colorScheme
                             .copyWith(outline: Colors.white),
                       ),
-                      child: const Icon(CupertinoIcons.right_chevron,color: AppColors.textGray,),
+                      child: const Icon(
+                        CupertinoIcons.right_chevron,
+                        color: AppColors.textGray,
+                      ),
                     ),
+                    onPressed: () {
+                      showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                          title: const Text(
+                            AppTexts.setDeviceAsTrusted,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.textBlack,
+                            ),
+                          ),
+                          content: const Text(
+                            AppTexts.setDeviceAsTrustedSubtitle,
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: AppColors.textGray,
+                            ),
+                          ),
+                          actions: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.only(right: 10),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: const Text(
+                                      AppTexts.noCancel,
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                        color: AppColors.blue,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: AppColors.blue,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: () => Navigator.pushNamed(context,RouteNames.setPin),
+                                    child: const Text(
+                                      AppTexts.yesContinue,
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                        color: AppColors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                          backgroundColor: AppColors.white,
+                        ),
+                      );
+                    },
                   )
                 ],
               ),
