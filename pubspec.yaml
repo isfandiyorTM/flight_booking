@@ -14,12 +14,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  awesome_snackbar_content: ^0.1.4
 
   # Utility Packages
 
   #Icons
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.8
+  supabase_flutter: ^2.8.2
 
   #State Managment
   get: ^4.6.5
@@ -61,10 +63,11 @@ flutter:
 
   # ---------- Local assets -------------- #
   assets:
-    - assets/logos/
+
     - assets/images/
     - assets/icons/
     - assets/translations/
+
 
   # ---------- Local fonts -------------- #
 #  fonts:

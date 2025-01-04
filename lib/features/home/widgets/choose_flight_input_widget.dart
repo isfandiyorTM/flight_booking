@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
+// ignore: depend_on_referenced_packages
 import 'package:easy_localization/easy_localization.dart';
 
+// ignore: must_be_immutable
 class ChooseFlightInput extends StatelessWidget {
   ChooseFlightInput(
       {super.key,

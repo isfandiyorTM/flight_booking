@@ -7,10 +7,12 @@ class CustomInput extends StatelessWidget {
     super.key,
     required this.labelText,
     required this.hintText,
+    this.controller, // Qo'shildi
   });
 
-  String? labelText;
-  String? hintText;
+  final String? labelText;
+  final String? hintText;
+  final TextEditingController? controller; // Qo'shildi
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +30,13 @@ class CustomInput extends StatelessWidget {
             ),
           ).tr(),
           TextFormField(
+            controller: controller, // Qo'shildi
             decoration: InputDecoration(
                 hintText: hintText!.tr(),
-                hintStyle: const TextStyle(fontSize: 14,color: AppColors.textBlack,fontWeight: FontWeight.w500),
+                hintStyle: const TextStyle(fontSize: 14, color: AppColors.textBlack, fontWeight: FontWeight.w500),
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: AppColors.textGray),
-                )
-            ),
-
+                )),
           ),
         ],
       ),

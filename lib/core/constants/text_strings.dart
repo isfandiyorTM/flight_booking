@@ -38,8 +38,13 @@ class AppTexts{
   static const String quickLogin = "Quick Login";
   static const String settings = "Settings";
   static const String logOut = "Log Out";
+  static const String defaultUserName = "User";
+  static const String noPhoneNumber = "Phone number not provided";
+  static const String exampleEmail = "example@example.com";
+  static const String defaultProfileImage = "assets/images/profile_image.png";
 
   static const String searchFlights = "Search Flights";
+  static const String searchDate = "Search date";
   static const String discoverANewWorld = "Discover \na new world";
   static const String oneWay = "One-way";
   static const String roundTrip = "Round-trip";

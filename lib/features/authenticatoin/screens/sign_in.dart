@@ -1,7 +1,10 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:t_store/core/route/route_names.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/text_strings.dart';
+import '../../../core/constants/snackbar.dart'; // Import snackbar utility
 import '../../../helpers/helper_functions.dart';
 import '../widgets/authentification_button.dart';
 import '../widgets/custom_button_widget.dart';
@@ -12,6 +15,55 @@ class SignIn extends StatelessWidget {
   SignIn({super.key});
 
   final _formKey = GlobalKey<FormState>();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  Future<void> signInUser(BuildContext context) async {
+    final email = emailController.text.trim();
+    final password = passwordController.text.trim();
+
+    if (email.isEmpty || password.isEmpty) {
+      AppSnackbar.show(
+        context: context,
+        title: 'Xatolik!',
+        message: 'Email yoki parol bo\'sh bo\'lishi mumkin emas.',
+        contentType: ContentType.failure,
+      );
+      return;
+    }
+
+    try {
+      final supabase = Supabase.instance.client;
+      final response = await supabase.auth.signInWithPassword(
+        email: email,
+        password: password,
+      );
+
+      if (response.session != null) {
+        AppSnackbar.show(
+          context: context,
+          title: 'Muvaffaqiyat!',
+          message: 'Tizimga muvaffaqiyatli kirdingiz!',
+          contentType: ContentType.success,
+        );
+        Navigator.pushNamed(context, RouteNames.bottomNavBar);
+      } else {
+        AppSnackbar.show(
+          context: context,
+          title: 'Xatolik!',
+          message: 'Email yoki parol noto\'g\'ri.',
+          contentType: ContentType.failure,
+        );
+      }
+    } catch (e) {
+      AppSnackbar.show(
+        context: context,
+        title: 'Xatolik!',
+        message: 'Xatolik: $e',
+        contentType: ContentType.failure,
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,11 +115,15 @@ class SignIn extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomInput(
-                          labelText: AppTexts.email,
-                          hintText: AppTexts.enterEmail),
+                        labelText: AppTexts.email,
+                        hintText: AppTexts.enterEmail,
+                        controller: emailController,
+                      ),
                       CustomInput(
-                          labelText: AppTexts.password,
-                          hintText: AppTexts.enterPassword),
+                        labelText: AppTexts.password,
+                        hintText: AppTexts.enterPassword,
+                        controller: passwordController,
+                      ),
                       CutomButton(
                         text: AppTexts.signIn,
                         bgColor: AppColors.blue,
@@ -77,15 +133,13 @@ class SignIn extends StatelessWidget {
                           color: AppColors.white,
                         ),
                         width: HelperFunctions.screenWidth(),
-                        onPressed: () {
-                          Navigator.pushNamed(context, RouteNames.bottomNavBar);
-                        },
+                        onPressed: () => signInUser(context),
                       ),
                     ],
                   ),
                 ),
                 const SizedBox(height: 30),
-                 SizedBox(
+                SizedBox(
                   width: double.infinity,
                   child: const Text(
                     AppTexts.orSignInWith,
@@ -138,7 +192,8 @@ class SignIn extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushNamed(context, RouteNames.signUp);
                       },
-                      child: const Text(AppTexts.signUp,style: TextStyle(color: AppColors.blue),).tr(),
+                      child: const Text(AppTexts.signUp,
+                          style: TextStyle(color: AppColors.blue)).tr(),
                     )
                   ],
                 ),

@@ -1,6 +1,9 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/text_strings.dart';
+import '../../../core/constants/snackbar.dart'; // Import snackbar utility
 import '../../../core/route/route_names.dart';
 import '../../../helpers/helper_functions.dart';
 import '../widgets/authentification_button.dart';
@@ -12,6 +15,78 @@ class SignUp extends StatelessWidget {
   SignUp({super.key});
 
   final _formKey = GlobalKey<FormState>();
+
+  // Email va Password uchun Controller
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  Future<void> signUpUser(BuildContext context) async {
+    final supabase = Supabase.instance.client;
+    final email = emailController.text.trim();
+    final password = passwordController.text.trim();
+
+    // Parolni minimal uzunligini tekshirish
+    if (password.length < 6) {
+      AppSnackbar.show(
+        context: context,
+        title: 'Xatolik!',
+        message: 'Parol kamida 6 ta belgi bo\'lishi kerak.',
+        contentType: ContentType.failure,
+      );
+      return;
+    }
+
+    if (email.isEmpty || password.isEmpty) {
+      AppSnackbar.show(
+        context: context,
+        title: 'Xatolik!',
+        message: 'Email yoki parol bo\'sh bo\'lishi mumkin emas.',
+        contentType: ContentType.failure,
+      );
+      return;
+    }
+
+    try {
+      // Auth-da foydalanuvchini ro'yxatdan o'tkazish
+      final response = await supabase.auth.signUp(
+        email: email,
+        password: password,
+      );
+
+      // Foydalanuvchi muvaffaqiyatli yaratilgan bo'lsa
+      if (response.user != null) {
+        final userId = response.user!.id; // Auth foydalanuvchi ID
+
+        // Foydalanuvchi ma'lumotlarini `users` jadvaliga yozish
+        await supabase.from('users').insert({
+          'id': userId, // Auth-dagi ID
+          'email': email,
+        });
+
+        AppSnackbar.show(
+          context: context,
+          title: 'Muvaffaqiyat!',
+          message: 'Ro\'yxatdan o\'tish muvaffaqiyatli!',
+          contentType: ContentType.success,
+        );
+        Navigator.pushNamed(context, RouteNames.bottomNavBar);
+      } else {
+        AppSnackbar.show(
+          context: context,
+          title: 'Xatolik!',
+          message: 'Ro\'yxatdan o\'tishda xatolik yuz berdi.',
+          contentType: ContentType.failure,
+        );
+      }
+    } catch (e) {
+      AppSnackbar.show(
+        context: context,
+        title: 'Xatolik!',
+        message: 'Xatolik: $e',
+        contentType: ContentType.failure,
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,8 +138,14 @@ class SignUp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomInput(
-                          labelText: AppTexts.email,
-                          hintText: AppTexts.enterEmail,
+                        labelText: AppTexts.email,
+                        hintText: AppTexts.enterEmail,
+                        controller: emailController,
+                      ),
+                      CustomInput(
+                        labelText: AppTexts.password,
+                        hintText: AppTexts.enterPassword,
+                        controller: passwordController,
                       ),
                       CutomButton(
                         text: AppTexts.signUp,
@@ -75,15 +156,13 @@ class SignUp extends StatelessWidget {
                           color: AppColors.white,
                         ),
                         width: HelperFunctions.screenWidth(),
-                        onPressed: () {
-                          Navigator.pushNamed(context, RouteNames.bottomNavBar);
-                        },
+                        onPressed: () => signUpUser(context),
                       ),
                     ],
                   ),
                 ),
                 const SizedBox(height: 30),
-                 SizedBox(
+                SizedBox(
                   width: double.infinity,
                   child: const Text(
                     AppTexts.orSignUpWith,
@@ -136,7 +215,7 @@ class SignUp extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushNamed(context, RouteNames.signIn);
                       },
-                      child: const Text(AppTexts.signIn,style: TextStyle(color: AppColors.blue),).tr(),
+                      child: const Text(AppTexts.signIn, style: TextStyle(color: AppColors.blue)).tr(),
                     )
                   ],
                 ),
@@ -148,4 +227,3 @@ class SignUp extends StatelessWidget {
     );
   }
 }
-
