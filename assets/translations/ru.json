@@ -88,6 +88,12 @@
   "Activate to set a Pin and Manage device connectivity.": "Активируйте для установки PIN-кода и управления подключением устройства.",
   "Pin": "ПИН-код",
   "Set PIN": "Установить ПИН-код",
-  "Set a 6 digit verification PIN to secure your accounts activities.": "Установите 6-значный ПИН-код для защиты действий в аккаунте."
-
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Установите 6-значный ПИН-код для защиты действий в аккаунте.",
+  "Continue and set device as trusted?": "Продолжить и установить устройство как доверенное?",
+  "To set a PIN, this device needs to be set as trusted": "Чтобы установить PIN-код, это устройство должно быть установлено как доверенное",
+  "No, cancel": "Нет, отменить",
+  "Yes, continue": "Да, продолжить",
+  "Set Pin": "Установить PIN-код",
+  "Confirm your PIN": "Подтвердите ваш PIN-код",
+  "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.": "Введите 6-значный PIN-код. Убедитесь, что комбинация не является простой для угадывания."
 }

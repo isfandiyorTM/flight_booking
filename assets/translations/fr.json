@@ -88,6 +88,12 @@
   "Activate to set a Pin and Manage device connectivity.": "Activez pour définir un code PIN et gérer la connectivité de l'appareil.",
   "Pin": "Code PIN",
   "Set PIN": "Définir le Code PIN",
-  "Set a 6 digit verification PIN to secure your accounts activities.": "Définissez un code PIN de vérification à 6 chiffres pour sécuriser les activités de votre compte."
-
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Définissez un code PIN de vérification à 6 chiffres pour sécuriser les activités de votre compte.",
+  "Continue and set device as trusted?": "Continuer et définir l'appareil comme fiable ?",
+  "To set a PIN, this device needs to be set as trusted": "Pour définir un code PIN, cet appareil doit être défini comme fiable",
+  "No, cancel": "Non, annuler",
+  "Yes, continue": "Oui, continuer",
+  "Set Pin": "Définir le Code PIN",
+  "Confirm your PIN": "Confirmez votre Code PIN",
+  "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.": "Entrez un code PIN à 6 chiffres. Assurez-vous que la combinaison n'est pas facile à deviner."
 }

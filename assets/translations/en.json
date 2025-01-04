@@ -88,6 +88,13 @@
   "Activate to set a Pin and Manage device connectivity.": "Activate to set a Pin and Manage device connectivity.",
   "Pin": "Pin",
   "Set PIN": "Set PIN",
-  "Set a 6 digit verification PIN to secure your accounts activities.": "Set a 6 digit verification PIN to secure your accounts activities."
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Set a 6 digit verification PIN to secure your accounts activities.",
+  "Continue and set device as trusted?": "Continue and set device as trusted?",
+  "To set a PIN, this device needs to be set as trusted": "To set a PIN, this device needs to be set as trusted",
+  "No, cancel": "No, cancel",
+  "Yes, continue": "Yes, continue",
+  "Set Pin": "Set Pin",
+  "Confirm your PIN": "Confirm your PIN",
+  "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.": "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess."
 
 }

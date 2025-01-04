@@ -88,6 +88,14 @@
   "Activate to set a Pin and Manage device connectivity.": "Kích hoạt để đặt mã PIN và quản lý kết nối thiết bị.",
   "Pin": "Mã PIN",
   "Set PIN": "Đặt Mã PIN",
-  "Set a 6 digit verification PIN to secure your accounts activities.": "Đặt mã PIN xác minh 6 chữ số để bảo vệ hoạt động tài khoản của bạn."
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Đặt mã PIN xác minh 6 chữ số để bảo vệ hoạt động tài khoản của bạn.",
+  "Continue and set device as trusted?": "Tiếp tục và đặt thiết bị là đáng tin cậy?",
+  "To set a PIN, this device needs to be set as trusted": "Để đặt mã PIN, thiết bị này cần được đặt là đáng tin cậy",
+  "No, cancel": "Không, hủy",
+  "Yes, continue": "Có, tiếp tục",
+  "Set Pin": "Đặt Mã PIN",
+  "Confirm your PIN": "Xác nhận Mã PIN của bạn",
+  "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.": "Nhập mã PIN 6 chữ số. Đảm bảo rằng tổ hợp không dễ đoán."
+
 
 }

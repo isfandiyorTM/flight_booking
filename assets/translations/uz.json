@@ -88,6 +88,13 @@
   "Activate to set a Pin and Manage device connectivity.": "PIN kodni o'rnatish va qurilma ulanishini boshqarish uchun faollashtiring.",
   "Pin": "PIN",
   "Set PIN": "PIN Kodni O'rnating",
-  "Set a 6 digit verification PIN to secure your accounts activities.": "Hisobingiz faoliyatini himoya qilish uchun 6 raqamli PIN kod o'rnating."
+  "Set a 6 digit verification PIN to secure your accounts activities.": "Hisobingiz faoliyatini himoya qilish uchun 6 raqamli PIN kod o'rnating.",
+  "Continue and set device as trusted?": "Davom eting va qurilmani ishonchli deb belgilang?",
+  "To set a PIN, this device needs to be set as trusted": "PIN kodni o'rnatish uchun ushbu qurilma ishonchli deb belgilanadi",
+  "No, cancel": "Yo'q, bekor qilish",
+  "Yes, continue": "Ha, davom eting",
+  "Set Pin": "PIN Kodni O'rnating",
+  "Confirm your PIN": "PIN Kodni Tasdiqlang",
+  "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.": "PIN kod uchun 6 raqamli sonni kiriting. Kombinatsiya osongina taxmin qilinmasligiga ishonch hosil qiling."
 
 }
