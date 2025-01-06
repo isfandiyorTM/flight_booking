@@ -113,6 +113,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 color: AppColors.textGray,
               ),
               title: AppTexts.deleteAccount,
+              onPressed: ()=> Navigator.pushNamed(context,RouteNames.deleteAccount),
             ),
 
             const SizedBox(height: 20),

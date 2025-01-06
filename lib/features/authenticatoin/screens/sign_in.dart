@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:t_store/core/route/route_names.dart';
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/snackbar.dart';
 import '../../../core/constants/text_strings.dart';
-import '../../../core/constants/snackbar.dart'; // Import snackbar utility
 import '../../../helpers/helper_functions.dart';
 import '../widgets/authentification_button.dart';
 import '../widgets/custom_button_widget.dart';
@@ -25,8 +25,8 @@ class SignIn extends StatelessWidget {
     if (email.isEmpty || password.isEmpty) {
       AppSnackbar.show(
         context: context,
-        title: 'Xatolik!',
-        message: 'Email yoki parol bo\'sh bo\'lishi mumkin emas.',
+        title: AppTexts.error,
+        message: AppTexts.signUpEmptyFields,
         contentType: ContentType.failure,
       );
       return;
@@ -42,28 +42,29 @@ class SignIn extends StatelessWidget {
       if (response.session != null) {
         AppSnackbar.show(
           context: context,
-          title: 'Muvaffaqiyat!',
-          message: 'Tizimga muvaffaqiyatli kirdingiz!',
+          title: AppTexts.success,
+          message: 'Successfully signed in!',
           contentType: ContentType.success,
         );
         Navigator.pushNamed(context, RouteNames.bottomNavBar);
       } else {
         AppSnackbar.show(
           context: context,
-          title: 'Xatolik!',
-          message: 'Email yoki parol noto\'g\'ri.',
+          title: AppTexts.error,
+          message: 'Incorrect email or password.',
           contentType: ContentType.failure,
         );
       }
     } catch (e) {
       AppSnackbar.show(
         context: context,
-        title: 'Xatolik!',
-        message: 'Xatolik: $e',
+        title: AppTexts.error,
+        message: '${AppTexts.error}: $e',
         contentType: ContentType.failure,
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {

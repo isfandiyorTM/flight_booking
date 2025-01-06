@@ -9,16 +9,19 @@ class SecuritySettingWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.subTitle,
-    required this.trailing
+    required this.trailing,
+    this.onPressed
   });
 
   String? title;
   String? subTitle;
   Widget? trailing;
+  VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap:onPressed,
       contentPadding: const EdgeInsets.all(0),
       title:  Text(
         title!,

@@ -73,7 +73,7 @@ class _SelectDateWidgetState extends State<SelectDateWidget> {
                   setState(() {
                     _selectedDate = selectedDate;
                     widget.dateController.text =
-                        _selectedDate.toString().split(' ')[0];
+                    _selectedDate.toString().split(' ')[0];
                   });
                 },
               ),

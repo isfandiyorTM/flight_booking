@@ -7,5 +7,10 @@ class AppImages{
   static const String profileImage = "assets/images/profile_image.png";
   static const String worldMap = "assets/images/world_map.png";
   static const String transaction = "assets/images/transaction.png";
+  static const String deleteAccount = "assets/images/delete_account.png";
+  static const String mastercard = "assets/images/mastercard.png";
+  static const String paypal = "assets/images/paypal.png";
+  static const String confirmedOrder = "assets/images/confirmed_order.png";
   static const String exchangeIcon = "assets/icons/exchange_icon.png";
+
 }

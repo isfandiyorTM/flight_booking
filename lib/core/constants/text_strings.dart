@@ -1,4 +1,4 @@
-class AppTexts{
+class AppTexts {
   AppTexts._();
 
   static const String onBoardingTitle1 = "Explore The Beautiful World!";
@@ -6,6 +6,29 @@ class AppTexts{
   static const String onBoardingTitle3 = "Book Appointment in Easiest Way!";
 
 
+  // General
+  static const String error = 'Error!';
+  static const String success = 'Success!';
+
+  // SignUp Messages
+  static const String signUpPasswordTooShort = 'The password must be at least 6 characters long.';
+  static const String signUpEmptyFields = 'Email or password cannot be empty.';
+  static const String signUpSuccess = 'Registration successful!';
+  static const String signUpError = 'An error occurred during registration.';
+
+
+
+  // Logout Messages
+  static const String logoutSuccessfulTitle = 'Logout Successful';
+  static const String logoutSuccessfulMessage = 'You have been logged out successfully.';
+  static const String loading = 'Loading...';
+  static const String noDataFound = 'No data found for the user';
+  static const String defaultUserName = 'User';
+  static const String noPhoneNumber = 'No phone number available';
+
+  // Account Page
+  static const String fetchingUserDataError = 'Error fetching user data: ';
+  static const String exampleEmail = 'example@example.com';
   //Button Texts
   static const String skip = "Skip";
   static const String next = "Next";
@@ -16,8 +39,8 @@ class AppTexts{
   static const String seeDetails = "See Details";
   static const String usePasscodeInstead = "Use Passcode Instead";
 
-
-  static const String startYourJourney = "Start Your Journey with affordable price";
+  static const String startYourJourney =
+      "Start Your Journey with affordable price";
   static const String email = "EMAIL";
   static const String enterEmail = "Enter Your Email";
   static const String password = "PASSWORD";
@@ -38,10 +61,6 @@ class AppTexts{
   static const String quickLogin = "Quick Login";
   static const String settings = "Settings";
   static const String logOut = "Log Out";
-  static const String defaultUserName = "User";
-  static const String noPhoneNumber = "Phone number not provided";
-  static const String exampleEmail = "example@example.com";
-  static const String defaultProfileImage = "assets/images/profile_image.png";
 
   static const String searchFlights = "Search Flights";
   static const String searchDate = "Search date";
@@ -54,17 +73,19 @@ class AppTexts{
   static const String vietnam = "Da Nang, Vietnam";
   static const String departureDate = "Departure Date";
   static const String date = "August 28, 2021";
-  static const String  travelers = " Travelers";
-  static const String  travelersCount = " 1 Adult, 1 child, 0 Infant";
+  static const String travelers = " Travelers";
+  static const String travelersCount = " 1 Adult, 1 child, 0 Infant";
 
-  static const String  transaction = "Transaction";
-  static const String  letsGo = "Let’s go somewhere";
-  static const String  letsGoSubTitle = "After book a trip you can manage orders and see E-ticket here.";
-  static const String  bookTrip = "Book a trip";
+  static const String transaction = "Transaction";
+  static const String letsGo = "Let’s go somewhere";
+  static const String letsGoSubTitle =
+      "After book a trip you can manage orders and see E-ticket here.";
+  static const String bookTrip = "Book a trip";
 
-  static const String  language = "Language";
-  static const String  home = "Home";
-  static const String  account = "Account";
+  static const String language = "Language";
+  static const String home = "Home";
+  static const String account = "Account";
+
 
   static const String general = "General";
   static const String notificationSettings = "Notification Settings";
@@ -83,30 +104,87 @@ class AppTexts{
   static const String pushNotificationDisabled = "Push Notification Disabled";
   static const String toEnableNotification = "To enable notifications, go to ";
   static const String activity = "Activity";
-  static const String activitySubTitle = "Secure your account by keeping your log in, register, and OTP activity on track.";
+  static const String activitySubTitle =
+      "Secure your account by keeping your log in, register, and OTP activity on track.";
   static const String specialForYou = "Special For You";
-  static const String specialForYouSubtitle = "You can never have too much of limited-time discount, exclusive offers, tips and info new feature.";
+  static const String specialForYouSubtitle =
+      "You can never have too much of limited-time discount, exclusive offers, tips and info new feature.";
   static const String reminders = "Reminders";
-  static const String remindersSubtitle = "Get important travel news and info, payment reminders, check-in reminder and more.";
+  static const String remindersSubtitle =
+      "Get important travel news and info, payment reminders, check-in reminder and more.";
   static const String membership = "Reminders";
-  static const String membershipSubtitle = "You’ll get emails about ticket Elite Rewards and surveys";
+  static const String membershipSubtitle =
+      "You’ll get emails about ticket Elite Rewards and surveys";
   static const String emailCapitalize = "Email";
   static const String pushNotification = "Push Notification";
 
   static const String unverified = "Unverified";
-  static const String youWillReceive = "You will receive  every transcation & security information on this email.";
+  static const String youWillReceive =
+      "You will receive  every transcation & security information on this email.";
 
   static const String creditCard = "Credit Card";
   static const String doubleVerification = "Double Verification";
-  static const String verificationSubtitle = "Enter CVV & OTP code for more secure payment verification.";
+  static const String verificationSubtitle =
+      "Enter CVV & OTP code for more secure payment verification.";
   static const String singleVerification = "Single Verification";
   static const String biometric = "Biometric";
   static const String activeBiometricFeature = "Activate Biometric Feature";
-  static const String activeBiometricFeatureSubtitle = "To enjoy a seamless log in with fingerprint or face recognition.";
+  static const String activeBiometricFeatureSubtitle =
+      "To enjoy a seamless log in with fingerprint or face recognition.";
   static const String device = "Device";
   static const String setDeviceAsTrusted = "Set Device as Trusted";
-  static const String setDeviceAsTrustedSubtitle = "Activate to set a Pin and Manage device connectivity.";
+  static const String setDeviceAsTrustedSubtitle =
+      "Activate to set a Pin and Manage device connectivity.";
   static const String pin = "Pin";
   static const String setPIN = "Set PIN";
-  static const String setPINSubtitle = "Set a 6 digit verification PIN to secure your accounts activities.";
+  static const String setPINSubtitle =
+      "Set a 6 digit verification PIN to secure your accounts activities.";
+
+  static const String continueDeviceAsTrusted =
+      "Continue and set device as trusted?";
+  static const String continueDeviceAsTrustedDescription =
+      "To set a PIN, this device needs to be set as trusted";
+  static const String noCancel = "No, cancel";
+  static const String yesContinue = "Yes, continue";
+
+  static const String setPin = "Set Pin";
+  static const String confirmPin = "Confirm your PIN";
+  static const String setPinSubTitle =
+      "Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.";
+
+  static const String youSureToDelete = "You sure want to delete your account?";
+  static const String ifYouDeleteYourAcc = "If you delete your account:";
+  static const String ticketPointNoUsable =
+      "Your remaining tiket Points cannot be used anymore.";
+  static const String rewardsNotAvailable =
+      "Your tiket Elite Rewards benefits will not be available anymore.";
+  static const String rewardsWillDeleted =
+      "All your pending rewards will be deleted.";
+  static const String creditCardRewards =
+      "All rewards from using credit card can no longer be obtained.";
+  static const String iUnderstandAndAccept =
+      "I understand and accept all the above risks regarding my account deletion.";
+
+  static const String digitalPaymentMethods = "Digital payment method(s)";
+  static const String swipeLeft = "Swipe left to set your default method";
+  static const String card = "***8976";
+  static const String discount = "Get 10\$ Discount";
+  static const String paypal = "Paypal";
+  static const String addMethods = "Add Methods";
+  static const String creditOrDebitCard = "Credit or debit card";
+  static const String add = "Add";
+  static const String visaMasterCard = "Visa, Mastercard, AMEX and JCB";
+  static const String transfer = "Transfer";
+  static const String transferSubtitle =
+      "Transferring via ATM, Internet \nBanking & Mobile Banking";
+  static const String subtotal = "Subtotal";
+
+  static const String passcode = "Passcode";
+  static const String enterYourPasscode =
+      "Enter Your Passcode to Proceed the Payment";
+  static const String forgotPassword = "Forgot passcode?";
+
+  static const String orderConfirmed = "Order Confirmed";
+  static const String orderConfirmedSubtitle =
+      "Thank you for your order. You will receive email confirmation shortly.";
 }

@@ -19,7 +19,6 @@ class SignUp extends StatelessWidget {
   // Email va Password uchun Controller
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-
   Future<void> signUpUser(BuildContext context) async {
     final supabase = Supabase.instance.client;
     final email = emailController.text.trim();
@@ -29,8 +28,8 @@ class SignUp extends StatelessWidget {
     if (password.length < 6) {
       AppSnackbar.show(
         context: context,
-        title: 'Xatolik!',
-        message: 'Parol kamida 6 ta belgi bo\'lishi kerak.',
+        title: AppTexts.error,
+        message: AppTexts.signUpPasswordTooShort,
         contentType: ContentType.failure,
       );
       return;
@@ -39,54 +38,46 @@ class SignUp extends StatelessWidget {
     if (email.isEmpty || password.isEmpty) {
       AppSnackbar.show(
         context: context,
-        title: 'Xatolik!',
-        message: 'Email yoki parol bo\'sh bo\'lishi mumkin emas.',
+        title: AppTexts.error,
+        message: AppTexts.signUpEmptyFields,
         contentType: ContentType.failure,
       );
       return;
     }
 
     try {
-      // Auth-da foydalanuvchini ro'yxatdan o'tkazish
       final response = await supabase.auth.signUp(
         email: email,
         password: password,
       );
 
-      // Foydalanuvchi muvaffaqiyatli yaratilgan bo'lsa
       if (response.user != null) {
-        final userId = response.user!.id; // Auth foydalanuvchi ID
-
-        // Foydalanuvchi ma'lumotlarini `users` jadvaliga yozish
-        await supabase.from('users').insert({
-          'id': userId, // Auth-dagi ID
-          'email': email,
-        });
-
         AppSnackbar.show(
           context: context,
-          title: 'Muvaffaqiyat!',
-          message: 'Ro\'yxatdan o\'tish muvaffaqiyatli!',
+          title: AppTexts.success,
+          message: AppTexts.signUpSuccess,
           contentType: ContentType.success,
         );
         Navigator.pushNamed(context, RouteNames.bottomNavBar);
-      } else {
+      } else if (response.session == null) {
         AppSnackbar.show(
           context: context,
-          title: 'Xatolik!',
-          message: 'Ro\'yxatdan o\'tishda xatolik yuz berdi.',
+          title: AppTexts.error,
+          message: AppTexts.signUpError,
           contentType: ContentType.failure,
         );
       }
     } catch (e) {
       AppSnackbar.show(
         context: context,
-        title: 'Xatolik!',
-        message: 'Xatolik: $e',
+        title: AppTexts.error,
+        message: '${AppTexts.error}: $e',
         contentType: ContentType.failure,
       );
     }
   }
+
+
 
   @override
   Widget build(BuildContext context) {

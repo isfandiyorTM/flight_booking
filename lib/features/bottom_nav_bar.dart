@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/core/constants/text_strings.dart';
+import 'package:t_store/features/payment/screens/payment_methods_page.dart';
 import 'package:t_store/features/transaction/screens/transaction_page.dart';
 import '../core/constants/colors.dart';
 import 'account/screens/account_page.dart';
@@ -18,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final List<Widget> _pages = [
     HomePage(),
-    TransactionPage() ,
+    PaymentMethodsPage() ,
     const AccountPage(),
   ];
 

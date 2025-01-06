@@ -1,8 +1,10 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/core/route/route_names.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/image_strings.dart';
+import '../../../core/constants/snackbar.dart';
 import '../../../core/constants/text_strings.dart';
 import '../widgets/account_setting_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -17,9 +19,9 @@ class AccountPage extends StatefulWidget {
 
 class _AccountPageState extends State<AccountPage> {
   Map<String, dynamic> userData = {
-    'full_name': 'Loading...',
-    'email': 'Loading...',
-    'phone_number': 'Loading...',
+    'full_name': AppTexts.loading,
+    'email': AppTexts.loading,
+    'phone_number': AppTexts.loading,
     'profile_image_url': null,
   };
 
@@ -31,6 +33,21 @@ class _AccountPageState extends State<AccountPage> {
     _loadUserData();
   }
 
+  Future<void> _logout() async {
+    Navigator.pushNamedAndRemoveUntil(
+      context,
+      RouteNames.signIn,
+          (route) => false,
+    );
+
+    AppSnackbar.show(
+      context: context,
+      title: AppTexts.logoutSuccessfulTitle,
+      message: AppTexts.logoutSuccessfulMessage,
+      contentType: ContentType.success,
+    );
+  }
+
   Future<void> _loadUserData() async {
     setState(() {
       isLoading = true;
@@ -38,20 +55,18 @@ class _AccountPageState extends State<AccountPage> {
 
     try {
       final data = await getUserData();
-      print('User Data: $data'); // Ma'lumotlarni chop etish
+      print('User Data: $data');
 
       if (data != null) {
         setState(() {
           userData = {
-            'full_name':
-                (data['full_name'] != null && data['full_name']!.isNotEmpty)
-                    ? data['full_name']
-                    : AppTexts.defaultUserName,
-            'email': data['email'] ?? 'example@example.com',
-            'phone_number': (data['phone_number'] != null &&
-                    data['phone_number']!.isNotEmpty)
+            'full_name': (data['full_name'] != null && data['full_name']!.isNotEmpty)
+                ? data['full_name']
+                : AppTexts.defaultUserName.tr(),
+            'email': data['email'] ?? 'exampleEmail'.tr(),
+            'phone_number': (data['phone_number'] != null && data['phone_number']!.isNotEmpty)
                 ? data['phone_number']
-                : AppTexts.noPhoneNumber,
+                : AppTexts.noPhoneNumber.tr(),
             'profile_image_url': data['profile_image_url'] ?? null,
           };
           isLoading = false;
@@ -61,19 +76,22 @@ class _AccountPageState extends State<AccountPage> {
           isLoading = false;
         });
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('No data found for the user')),
+          SnackBar(content: Text('noDataFound'.tr())),
         );
       }
     } catch (e) {
       setState(() {
         isLoading = false;
       });
-      print('Error fetching user data: $e');
+      print('${'fetchingUserDataError'.tr()}$e');
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: $e')),
+        SnackBar(content: Text('${'error'.tr()}: $e')),
       );
     }
   }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -241,7 +259,11 @@ class _AccountPageState extends State<AccountPage> {
                           size: 30,
                         ),
                         title: AppTexts.logOut,
+                        onPressed: () async {
+                          await _logout(); // Call the logout function
+                        },
                       ),
+
                     ],
                   ),
                 ],

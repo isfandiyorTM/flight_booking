@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/image_strings.dart';
 import '../../../core/constants/text_strings.dart';
+import '../../search/search_page.dart';
 import '../widgets/choose_flight_input_widget.dart';
 
 // ignore: depend_on_referenced_packages
@@ -208,7 +209,12 @@ class _HomePageState extends State<HomePage> {
                       color: AppColors.blue,
                     ),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SearchPage()),
+                        );
+                      },
                       child: const Text(
                         AppTexts.searchFlights,
                         style: TextStyle(
@@ -217,6 +223,7 @@ class _HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.w500),
                       ).tr(),
                     ),
+
                   ),
                   const SizedBox(height: 10),
                 ],
