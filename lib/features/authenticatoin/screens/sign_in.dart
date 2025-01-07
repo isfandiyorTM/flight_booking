@@ -1,9 +1,6 @@
-import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:t_store/core/route/route_names.dart';
 import '../../../core/constants/colors.dart';
-import '../../../core/constants/snackbar.dart';
 import '../../../core/constants/text_strings.dart';
 import '../../../helpers/helper_functions.dart';
 import '../widgets/authentification_button.dart';
@@ -15,56 +12,6 @@ class SignIn extends StatelessWidget {
   SignIn({super.key});
 
   final _formKey = GlobalKey<FormState>();
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-
-  Future<void> signInUser(BuildContext context) async {
-    final email = emailController.text.trim();
-    final password = passwordController.text.trim();
-
-    if (email.isEmpty || password.isEmpty) {
-      AppSnackbar.show(
-        context: context,
-        title: AppTexts.error,
-        message: AppTexts.signUpEmptyFields,
-        contentType: ContentType.failure,
-      );
-      return;
-    }
-
-    try {
-      final supabase = Supabase.instance.client;
-      final response = await supabase.auth.signInWithPassword(
-        email: email,
-        password: password,
-      );
-
-      if (response.session != null) {
-        AppSnackbar.show(
-          context: context,
-          title: AppTexts.success,
-          message: 'Successfully signed in!',
-          contentType: ContentType.success,
-        );
-        Navigator.pushNamed(context, RouteNames.bottomNavBar);
-      } else {
-        AppSnackbar.show(
-          context: context,
-          title: AppTexts.error,
-          message: 'Incorrect email or password.',
-          contentType: ContentType.failure,
-        );
-      }
-    } catch (e) {
-      AppSnackbar.show(
-        context: context,
-        title: AppTexts.error,
-        message: '${AppTexts.error}: $e',
-        contentType: ContentType.failure,
-      );
-    }
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -116,15 +63,11 @@ class SignIn extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomInput(
-                        labelText: AppTexts.email,
-                        hintText: AppTexts.enterEmail,
-                        controller: emailController,
-                      ),
+                          labelText: AppTexts.email,
+                          hintText: AppTexts.enterEmail),
                       CustomInput(
-                        labelText: AppTexts.password,
-                        hintText: AppTexts.enterPassword,
-                        controller: passwordController,
-                      ),
+                          labelText: AppTexts.password,
+                          hintText: AppTexts.enterPassword),
                       CutomButton(
                         text: AppTexts.signIn,
                         bgColor: AppColors.blue,
@@ -134,7 +77,9 @@ class SignIn extends StatelessWidget {
                           color: AppColors.white,
                         ),
                         width: HelperFunctions.screenWidth(),
-                        onPressed: () => signInUser(context),
+                        onPressed: () {
+                          Navigator.pushNamed(context, RouteNames.bottomNavBar);
+                        },
                       ),
                     ],
                   ),
@@ -193,8 +138,7 @@ class SignIn extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushNamed(context, RouteNames.signUp);
                       },
-                      child: const Text(AppTexts.signUp,
-                          style: TextStyle(color: AppColors.blue)).tr(),
+                      child: const Text(AppTexts.signUp,style: TextStyle(color: AppColors.blue),).tr(),
                     )
                   ],
                 ),
