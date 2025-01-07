@@ -19,9 +19,9 @@ class AccountPage extends StatefulWidget {
 
 class _AccountPageState extends State<AccountPage> {
   Map<String, dynamic> userData = {
-    'full_name': AppTexts.loading,
-    'email': AppTexts.loading,
-    'phone_number': AppTexts.loading,
+    'full_name': AppTexts.accountName.tr(),
+    'email': AppTexts.accountEmail.tr(),
+    'phone_number': AppTexts.accountPhone.tr(),
     'profile_image_url': null,
   };
 

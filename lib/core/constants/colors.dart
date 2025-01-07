@@ -13,6 +13,10 @@ class AppColors {
   static const Color red = Color(0xFFE01E1E);
   static const Color inputBg = Color(0xFFF4F4F4);
   static const Color yellow = Color(0xFFB08300);
+  static const Color seatMap = Color(0xFFF2F3F6);
+  static const Color seatBg = Color(0xFFC0D4F6);
+
+
 
 
   // Switch Colors

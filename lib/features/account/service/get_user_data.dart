@@ -21,5 +21,5 @@ Future<Map<String, dynamic>?> getUserData() async {
     return null;
   }
 
-  return response as Map<String, dynamic>;
+  return response;
 }

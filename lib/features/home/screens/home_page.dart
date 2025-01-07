@@ -144,27 +144,33 @@ class _HomePageState extends State<HomePage> {
                       color: AppColors.blue,
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+
+
+                  Stack(
                     children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Image.asset(
-                          AppImages.exchangeIcon,
-                          width: 24,
-                          height: 24,
+                      ChooseFlightInput(
+                        title: AppTexts.to,
+                        hintText: AppTexts.vietnam,
+                        icon: const Icon(
+                          Icons.flight_land_outlined,
+                          color: AppColors.blue,
                         ),
                       ),
+                      Positioned(
+                        right: 0,
+                        top: -14,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Image.asset(
+                            AppImages.exchangeIcon,
+                            width: 24,
+                            height: 24,
+                          ),
+                        ),
+                      ),
+
                     ],
-                  ),
-                  ChooseFlightInput(
-                    title: AppTexts.to,
-                    hintText: AppTexts.vietnam,
-                    icon: const Icon(
-                      Icons.flight_land_outlined,
-                      color: AppColors.blue,
-                    ),
+
                   ),
                   ChooseFlightInput(
                     title: AppTexts.departureDate,
@@ -225,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 50),
                 ],
               ),
             )

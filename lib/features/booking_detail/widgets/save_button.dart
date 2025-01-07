@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 
+import '../../../core/constants/text_strings.dart';
 class SaveButton extends StatelessWidget {
-  const SaveButton({Key? key, required Null Function() onPressed}) : super(key: key);
+  const SaveButton({super.key, required Null Function() onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +21,9 @@ class SaveButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
         ),
-        child: const Text(
-          "Save changes",
-          style: TextStyle(
+        child:  Text(
+          AppTexts.saveChanges.tr(),
+          style: const TextStyle(
             color: AppColors.white,
             fontSize: 16,
             fontWeight: FontWeight.bold,

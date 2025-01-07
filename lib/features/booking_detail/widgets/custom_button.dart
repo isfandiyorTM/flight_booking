@@ -6,16 +6,16 @@ class CustomButton extends StatelessWidget {
   final String label;
 
   const CustomButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.label,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onPressed, // Handle the button click
-      borderRadius: BorderRadius.circular(8), // For ripple effect with rounded corners
+      onTap: onPressed,
+      borderRadius: BorderRadius.circular(8),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
         decoration: BoxDecoration(

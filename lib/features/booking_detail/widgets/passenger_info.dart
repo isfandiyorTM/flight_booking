@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/text_strings.dart';
 import '../passenger_info.dart';
 import 'custom_button.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class PassengerInfo extends StatefulWidget {
-  const PassengerInfo({Key? key}) : super(key: key);
+  const PassengerInfo({super.key});
 
   @override
   State<PassengerInfo> createState() => _PassengerInfoState();
@@ -19,7 +21,7 @@ class _PassengerInfoState extends State<PassengerInfo> {
       children: [
         // Same As Contact Details Box
         Container(
-          margin: const EdgeInsets.only(bottom: 16), // Adds spacing between boxes
+          margin: const EdgeInsets.only(bottom: 16),
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
           decoration: BoxDecoration(
             color: AppColors.white,
@@ -29,11 +31,10 @@ class _PassengerInfoState extends State<PassengerInfo> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                "Same As Contact Details",
-                style: TextStyle(
+              Text(
+                AppTexts.sameContact.tr(),
+                style: const TextStyle(
                   color: AppColors.textBlack,
-
                   fontSize: 16,
                 ),
               ),
@@ -49,27 +50,22 @@ class _PassengerInfoState extends State<PassengerInfo> {
                 inactiveThumbColor: AppColors.switchInactiveThumb,
                 inactiveTrackColor: AppColors.switchInactiveTrack,
               ),
-
-
             ],
           ),
         ),
         // Selena Kayle Box
         GestureDetector(
-          onTap: () {
-
-          },
+          onTap: () {},
           child: CustomButton(
-            label: "Selena Kayle",
+            label: AppTexts.selena.tr(),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const PassengerInfoPage()),
+                MaterialPageRoute(
+                    builder: (context) => const PassengerInfoPage()),
               );
             },
           ),
-
-
         ),
       ],
     );

@@ -24,6 +24,7 @@ dependencies:
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.8
   supabase_flutter: ^2.8.2
+  sliding_widget: ^0.0.5
 
   #State Managment
   get: ^4.6.5

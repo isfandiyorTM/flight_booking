@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:easy_localization/easy_localization.dart'; // Easy Localization import
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/text_strings.dart';
 import '../../select_seat/select_seat.dart';
 
 class SubtotalSection extends StatelessWidget {
@@ -12,31 +13,31 @@ class SubtotalSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         // Subtotal and Amount
-        const Column(
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 Text(
-                  "Subtotal",
-                  style: TextStyle(
+                  AppTexts.subtotal.tr(), // Easy Localization .tr() extension
+                  style: const TextStyle(
                     color: AppColors.textGray,
                     fontWeight: FontWeight.normal,
                     fontSize: 14,
                   ),
                 ),
-                SizedBox(width: 4),
-                Icon(
+                const SizedBox(width: 4),
+                const Icon(
                   Icons.keyboard_arrow_down,
                   color: AppColors.blue,
                   size: 20,
                 ),
               ],
             ),
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
             Text(
-              "\$132",
-              style: TextStyle(
+              AppTexts.price132.tr(), // Easy Localization .tr() extension
+              style: const TextStyle(
                 color: AppColors.textBlack,
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
@@ -49,30 +50,29 @@ class SubtotalSection extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) =>  SeatBookingApp()),
+              MaterialPageRoute(builder: (context) => const SeatBookingPage()),
             );
           },
           icon: const Icon(
             Icons.check_circle,
             color: AppColors.white,
           ),
-          label: const Text(
-            "Select Seat",
-            style: TextStyle(
+          label: Text(
+            AppTexts.selectSeat.tr(), // Easy Localization .tr() extension
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16,
               color: AppColors.white,
             ),
           ),
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.blue, // Button background color
+            backgroundColor: AppColors.blue,
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),
             ),
           ),
         ),
-
       ],
     );
   }

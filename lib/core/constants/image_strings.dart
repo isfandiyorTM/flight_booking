@@ -12,5 +12,7 @@ class AppImages{
   static const String paypal = "assets/images/paypal.png";
   static const String confirmedOrder = "assets/images/confirmed_order.png";
   static const String exchangeIcon = "assets/icons/exchange_icon.png";
+  static const String ukFlag = "assets/icons/uk_flag.png";
+
 
 }

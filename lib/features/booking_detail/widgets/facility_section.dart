@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/text_strings.dart';
 import '../addBaggageBottomSheet.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class FacilitySection extends StatelessWidget {
   const FacilitySection({Key? key}) : super(key: key);
@@ -10,28 +12,26 @@ class FacilitySection extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.white, // Background color from AppColors
+        color: AppColors.white,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(
-            color: AppColors.borderColor), // Border color from AppColors
+        border: Border.all(color: AppColors.borderColor),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Baggage",
-                style: TextStyle(
-                  color: AppColors.textBlack, // Text color from AppColors
+                AppTexts.baggage.tr(),
+                style: const TextStyle(
+                  color: AppColors.textBlack,
                 ),
               ),
               Text(
-                "Add extra baggage",
-                style: TextStyle(
+                AppTexts.extraBaggage.tr(),
+                style: const TextStyle(
                   color: AppColors.textGray,
-                  // Subtitle text color from AppColors
                   fontSize: 12,
                 ),
               ),
@@ -53,7 +53,6 @@ class FacilitySection extends StatelessWidget {
               );
             },
           ),
-
         ],
       ),
     );

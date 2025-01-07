@@ -1,9 +1,12 @@
 import 'package:dotted_line/dotted_line.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_widget/ticket_widget.dart';
 import '../../core/constants/colors.dart';
 import '../../core/constants/image_strings.dart';
+import '../../core/constants/text_strings.dart';
 import '../booking_detail/booking_detail.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SearchPage extends StatelessWidget {
   final List<Map<String, dynamic>> tickets = [
@@ -48,6 +51,8 @@ class SearchPage extends StatelessWidget {
     },
   ];
 
+  SearchPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,15 +80,15 @@ class SearchPage extends StatelessWidget {
                     GestureDetector(
                       onTap: () => Navigator.pop(context),
                       child: const Icon(
-                        Icons.arrow_back,
+                        CupertinoIcons.back,
                         size: 30,
                         color: AppColors.white,
                       ),
                     ),
                     const Spacer(),
-                    const Text(
-                      'Search Flights',
-                      style: TextStyle(
+                    Text(
+                      AppTexts.searchFlights.tr(),
+                      style: const TextStyle(
                         color: AppColors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
@@ -95,7 +100,8 @@ class SearchPage extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 16.0, horizontal: 8.0),
                   child: ListView.builder(
                     itemCount: tickets.length,
                     itemBuilder: (context, index) {
@@ -115,17 +121,20 @@ class SearchPage extends StatelessWidget {
                             width: double.infinity,
                             height: 200,
                             isCornerRounded: true,
-                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 24, vertical: 16),
                             color: AppColors.white,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 // Departure and Arrival
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           ticket['departure'],
@@ -144,28 +153,35 @@ class SearchPage extends StatelessWidget {
                                       ],
                                     ),
                                     Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           children: [
                                             const CircleAvatar(
                                               radius: 8,
-                                              backgroundColor: AppColors.lightGray,
+                                              backgroundColor:
+                                                  AppColors.lightGray,
                                               child: CircleAvatar(
                                                 radius: 4,
-                                                backgroundColor: AppColors.textGray,
+                                                backgroundColor:
+                                                    AppColors.textGray,
                                               ),
                                             ),
                                             Container(
-                                              margin: const EdgeInsets.symmetric(horizontal: 8),
+                                              margin:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 8),
                                               child: const DottedLine(
                                                 direction: Axis.horizontal,
                                                 lineLength: 50,
                                                 lineThickness: 2,
                                                 dashLength: 4,
                                                 dashGapLength: 3,
-                                                dashColor: AppColors.borderColor,
+                                                dashColor:
+                                                    AppColors.borderColor,
                                               ),
                                             ),
                                             Image.asset(
@@ -176,22 +192,27 @@ class SearchPage extends StatelessWidget {
                                               color: AppColors.blue,
                                             ),
                                             Container(
-                                              margin: const EdgeInsets.symmetric(horizontal: 8),
+                                              margin:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 8),
                                               child: const DottedLine(
                                                 direction: Axis.horizontal,
                                                 lineLength: 50,
                                                 lineThickness: 2,
                                                 dashLength: 4,
                                                 dashGapLength: 3,
-                                                dashColor: AppColors.borderColor,
+                                                dashColor:
+                                                    AppColors.borderColor,
                                               ),
                                             ),
                                             const CircleAvatar(
                                               radius: 8,
-                                              backgroundColor: AppColors.lightGray,
+                                              backgroundColor:
+                                                  AppColors.lightGray,
                                               child: CircleAvatar(
                                                 radius: 4,
-                                                backgroundColor: AppColors.textGray,
+                                                backgroundColor:
+                                                    AppColors.textGray,
                                               ),
                                             ),
                                           ],
@@ -206,7 +227,8 @@ class SearchPage extends StatelessWidget {
                                       ],
                                     ),
                                     Column(
-                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
                                       children: [
                                         Text(
                                           ticket['arrival'],
@@ -228,10 +250,12 @@ class SearchPage extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 8),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           ticket['departureTime'],
@@ -242,12 +266,14 @@ class SearchPage extends StatelessWidget {
                                         ),
                                         Text(
                                           ticket['departureDate'],
-                                          style: const TextStyle(color: AppColors.textGray),
+                                          style: const TextStyle(
+                                              color: AppColors.textGray),
                                         ),
                                       ],
                                     ),
                                     Column(
-                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
                                       children: [
                                         Text(
                                           ticket['arrivalTime'],
@@ -258,7 +284,8 @@ class SearchPage extends StatelessWidget {
                                         ),
                                         Text(
                                           ticket['arrivalDate'],
-                                          style: const TextStyle(color: AppColors.textGray),
+                                          style: const TextStyle(
+                                              color: AppColors.textGray),
                                         ),
                                       ],
                                     ),
@@ -273,7 +300,8 @@ class SearchPage extends StatelessWidget {
                                   lineLength: double.infinity,
                                 ),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Row(
                                       children: [
@@ -286,7 +314,9 @@ class SearchPage extends StatelessWidget {
                                         const SizedBox(width: 8),
                                         const Text(
                                           "Qatar Airways",
-                                          style: TextStyle(fontSize: 16, color: AppColors.textGray),
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              color: AppColors.textGray),
                                         ),
                                       ],
                                     ),

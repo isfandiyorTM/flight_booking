@@ -1,8 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../core/constants/colors.dart';
+import '../../core/constants/text_strings.dart';
 import 'widgets/gender_selection.dart';
 import 'widgets/input_field.dart';
 import 'widgets/save_button.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class PassengerInfoPage extends StatefulWidget {
   const PassengerInfoPage({Key? key}) : super(key: key);
@@ -12,9 +15,9 @@ class PassengerInfoPage extends StatefulWidget {
 }
 
 class _PassengerInfoPageState extends State<PassengerInfoPage> {
-  String _gender = "Male"; // Default gender selection
+  String _gender = AppTexts.male.tr(); // Default gender selection
   final TextEditingController _nameController =
-  TextEditingController(text: "Cameron Williamson");
+  TextEditingController(text: AppTexts.cameronWilliamson.tr());
   final TextEditingController _idNumberController =
   TextEditingController(text: "12867358234523");
 
@@ -26,12 +29,12 @@ class _PassengerInfoPageState extends State<PassengerInfoPage> {
         elevation: 0,
         backgroundColor: AppColors.white,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.textBlack),
+          icon: const Icon(CupertinoIcons.back, color: AppColors.textBlack),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          "Passenger Info",
-          style: TextStyle(
+        title:  Text(
+          AppTexts.passengerInfo.tr(),
+          style: const TextStyle(
             color: AppColors.textBlack,
             fontSize: 20,
             fontWeight: FontWeight.w500,
@@ -56,22 +59,22 @@ class _PassengerInfoPageState extends State<PassengerInfoPage> {
 
             // Full Name Input
             InputField(
-              label: "Full Name",
+              label: AppTexts.fullName.tr(),
               controller: _nameController,
             ),
             const SizedBox(height: 16),
 
             // ID Card Number Input
             InputField(
-              label: "ID card number",
+              label:AppTexts.idCard.tr(),
               controller: _idNumberController,
             ),
             const SizedBox(height: 16),
 
             // Info Text
-            const Text(
-              "This contact is for e-ticket and refund/rescheduling",
-              style: TextStyle(
+             Text(
+              AppTexts.rescheduling.tr(),
+              style: const TextStyle(
                 color: AppColors.textGray,
                 fontSize: 12,
               ),
@@ -80,7 +83,7 @@ class _PassengerInfoPageState extends State<PassengerInfoPage> {
 
             // Save Changes Button
             SaveButton(onPressed: () {
-              Navigator.pop(context); // Go back to the previous page
+              Navigator.pop(context);
             }),
           ],
         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart'; // Easy localization import
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/text_strings.dart';
 import '../contact_person_detail.dart';
 
 class ContactDetails extends StatelessWidget {
@@ -21,16 +23,16 @@ class ContactDetails extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Row(
+              Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     backgroundColor: AppColors.lightGray,
                     radius: 24,
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Text(
-                    "Matt Murdock",
-                    style: TextStyle(
+                    AppTexts.contactPersonName.tr(),
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                       color: AppColors.textBlack,
@@ -45,9 +47,9 @@ class ContactDetails extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const ContactPersonDetailPage()),
                   );
                 },
-                child: const Text(
-                  "Edit",
-                  style: TextStyle(
+                child: Text(
+                  AppTexts.edit.tr(),
+                  style: const TextStyle(
                     color: AppColors.blue,
                     fontWeight: FontWeight.bold,
                   ),
@@ -63,16 +65,16 @@ class ContactDetails extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               border: Border.all(color: AppColors.borderColor),
             ),
-            child: const Column(
+            child: Column(
               children: [
                 Row(
                   children: [
-                    Icon(Icons.email, size: 16, color: AppColors.blue),
-                    SizedBox(width: 8),
+                    const Icon(Icons.email, size: 16, color: AppColors.blue),
+                    const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        "imnotdaredevil@mail.com",
-                        style: TextStyle(
+                        AppTexts.imnotdaredevilEmail.tr(), // "imnotdaredevil@mail.com"
+                        style: const TextStyle(
                           color: AppColors.textGray,
                           fontSize: 14,
                         ),
@@ -80,14 +82,14 @@ class ContactDetails extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Row(
                   children: [
-                    Icon(Icons.phone, size: 16, color: AppColors.blue),
-                    SizedBox(width: 8),
+                    const Icon(Icons.phone, size: 16, color: AppColors.blue),
+                    const SizedBox(width: 8),
                     Text(
-                      "+628123223922",
-                      style: TextStyle(
+                      AppTexts.phoneNumber.tr(),
+                      style: const TextStyle(
                         color: AppColors.textGray,
                         fontSize: 14,
                       ),

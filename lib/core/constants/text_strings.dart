@@ -5,22 +5,30 @@ class AppTexts {
   static const String onBoardingTitle2 = "Find Your Perfect Tickets To Fly";
   static const String onBoardingTitle3 = "Book Appointment in Easiest Way!";
 
-
   // General
   static const String error = 'Error!';
   static const String success = 'Success!';
+  static const String fullName = 'Full Name';
+  static const String emailAddress = 'Email Address';
+  static const String phoneNumberDefault = 'Phone Number';
+  static const String idCard = 'ID card number';
+  static const String selected = "SELECTED";
+  static const String available = "AVAILABLE";
+  static const String notAvailable = "NOT AVAILABLE";
+  static const String slideToBook = "Slide to Book";
+  static const String selectedSeat = "selected Seat";
 
   // SignUp Messages
-  static const String signUpPasswordTooShort = 'The password must be at least 6 characters long.';
+  static const String signUpPasswordTooShort =
+      'The password must be at least 6 characters long.';
   static const String signUpEmptyFields = 'Email or password cannot be empty.';
   static const String signUpSuccess = 'Registration successful!';
   static const String signUpError = 'An error occurred during registration.';
 
-
-
   // Logout Messages
   static const String logoutSuccessfulTitle = 'Logout Successful';
-  static const String logoutSuccessfulMessage = 'You have been logged out successfully.';
+  static const String logoutSuccessfulMessage =
+      'You have been logged out successfully.';
   static const String loading = 'Loading...';
   static const String noDataFound = 'No data found for the user';
   static const String defaultUserName = 'User';
@@ -29,6 +37,7 @@ class AppTexts {
   // Account Page
   static const String fetchingUserDataError = 'Error fetching user data: ';
   static const String exampleEmail = 'example@example.com';
+
   //Button Texts
   static const String skip = "Skip";
   static const String next = "Next";
@@ -51,8 +60,8 @@ class AppTexts {
   static const String dontHaveAccount = "Don’t Have an Account?";
 
   static const String myProfile = "My Profile";
-  static const String accountName = "Isfandiyor Madaminov";
-  static const String accountEmail = "isfandiyormadaminov12@gmail.com";
+  static const String accountName = "Jos Creative";
+  static const String accountEmail = "josphamdes@gmail.com";
   static const String accountPhone = "+998 (77) 777-77-77";
   static const String myOrder = "My Order";
   static const String myVoucher = "My Voucher";
@@ -85,7 +94,6 @@ class AppTexts {
   static const String language = "Language";
   static const String home = "Home";
   static const String account = "Account";
-
 
   static const String general = "General";
   static const String notificationSettings = "Notification Settings";
@@ -187,4 +195,53 @@ class AppTexts {
   static const String orderConfirmed = "Order Confirmed";
   static const String orderConfirmedSubtitle =
       "Thank you for your order. You will receive email confirmation shortly.";
+
+  // Contact Details
+  static const String contactPersonName = "Matt Murdock";
+  static const String edit = "Edit";
+  static const String imnotdaredevilEmail = "imnotdaredevil@mail.com";
+  static const String phoneNumber = "+628123223922";
+  static const String countryCode = "(+44)";
+
+  //ExtraProtectionSection
+  static const String travelInsurance = "Travel Insurance";
+  static const String travelInsurancePrice = "\$125";
+  static const String travelCoverage = "Coverage for Accidents up to \$10000";
+  static const String travelCoverage1 =
+      "Coverage for trip cancellation by passengers up to \$1250";
+  static const String addInsurance = "Add Insurance";
+  static const String baggage = "Baggage";
+  static const String extraBaggage = "Add extra baggage";
+  static const String male = "Male";
+  static const String female = "Female";
+  static const String rescheduling =
+      "This contact is for e-ticket and refund/rescheduling";
+  static const String sameContact = "Same As Contact Details";
+  static const String selena = "Selena Kayle";
+  static const String saveChanges = "Save changes";
+  static const String price132 = "\$132";
+  static const String selectSeat = "Select Seat";
+  static const String addBaggage = "Add Baggage";
+  static const String mattMurdock = "1. Matt Murdock";
+  static const String free = "Free";
+  static const String total = "Total";
+  static const String contactDetails = "Contact Details";
+  static const String forVoucher = "(For E-Ticket/Voucher)";
+  static const String passengerInfo = "Passenger Info";
+  static const String facility = "Facility";
+  static const String extraProtection = "Extra Protection";
+  static const String cameronWilliamson = "Cameron Williamson";
+  static const String williamsonEmail = "williamson@gmail.com";
+
+  static const String doubleCheckYourBookings = "Double Check Your Bookings";
+  static const String pleaseDoubleCheck =
+      "Please before you proceed to payment, make sure your data is correct.";
+  static const String price210000 = "Rp. 210.000";
+
+  static const String flightDate = "Wed, OCT 26 2022";
+  static const String newyork = "New York, USA";
+  static const String lga = "(LGA)";
+  static const String flightTime = "9:37 PM";
+  static const String danang = "Danang, VIE";
+  static const String dad = "(DAD)";
 }

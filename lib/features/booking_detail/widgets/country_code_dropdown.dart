@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:t_store/core/constants/text_strings.dart';
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/image_strings.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class CountryCodeDropdown extends StatelessWidget {
   const CountryCodeDropdown({Key? key}) : super(key: key);
@@ -30,15 +33,15 @@ class CountryCodeDropdown extends StatelessWidget {
               Row(
                 children: [
                   Image.asset(
-                    "assets/icons/uk_flag.png",
+                    AppImages.ukFlag,
                     width: 32,
                     height: 24,
                     fit: BoxFit.contain,
                   ),
                   const SizedBox(width: 8),
-                  const Text(
-                    "(+44)",
-                    style: TextStyle(
+                  Text(
+                    AppTexts.countryCode.tr(),
+                    style: const TextStyle(
                       color: AppColors.textBlack,
                       fontSize: 16,
                     ),

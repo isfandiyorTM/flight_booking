@@ -6,10 +6,10 @@ class InputField extends StatelessWidget {
   final TextEditingController controller;
 
   const InputField({
-    Key? key,
+    super.key,
     required this.label,
     required this.controller,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class InputField extends StatelessWidget {
             fillColor: AppColors.bgLight,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: AppColors.borderColor),
+              borderSide: const BorderSide(color: AppColors.borderColor),
             ),
           ),
           style: const TextStyle(

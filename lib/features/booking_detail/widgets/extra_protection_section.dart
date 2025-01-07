@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/text_strings.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ExtraProtectionSection extends StatelessWidget {
-  const ExtraProtectionSection({Key? key}) : super(key: key);
+  const ExtraProtectionSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,20 +20,20 @@ class ExtraProtectionSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Title and Price Row
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Iconsax.shield_tick5,
                     color: AppColors.blue,
                     size: 24,
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Text(
-                    "Travel Insurance",
-                    style: TextStyle(
+                    AppTexts.travelInsurance.tr(),
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                       color: AppColors.textBlack,
@@ -40,8 +42,8 @@ class ExtraProtectionSection extends StatelessWidget {
                 ],
               ),
               Text(
-                "\$125",
-                style: TextStyle(
+                AppTexts.travelInsurancePrice.tr(),
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                   color: AppColors.textBlack,
@@ -51,29 +53,31 @@ class ExtraProtectionSection extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           // Features List
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              FeatureRow(text: "Coverage for Accidents up to \$10000"),
-              SizedBox(height: 8),
               FeatureRow(
-                  text:
-                      "Coverage for trip cancellation by passengers up to \$1250"),
+                text: AppTexts.travelCoverage.tr(),
+              ),
+              const SizedBox(height: 8),
+              FeatureRow(
+                text: AppTexts.travelCoverage1.tr(),
+              )
             ],
           ),
           const SizedBox(height: 16),
           // Centered Add Insurance Button
           SizedBox(
-            width: double.infinity, // Make the button full-width
+            width: double.infinity,
             child: ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(
                 Icons.add,
                 color: AppColors.blue,
               ),
-              label: const Text(
-                "Add Insurance",
-                style: TextStyle(
+              label:  Text(
+                AppTexts.addInsurance.tr(),
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: AppColors.textBlack,
                 ),
